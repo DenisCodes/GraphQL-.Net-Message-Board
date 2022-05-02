@@ -1,0 +1,29 @@
+﻿@page "/"
+@using Forum3.Data
+@using System.Linq
+@inject Forum3Client _forum3Client;
+<MudGrid Justify="Justify.Center" class="pr-4 pl-4">
+    @foreach (var post in allPosts)
+    {
+        <MudItem xs="3">
+            <MudCard>
+                <MudCardHeader>
+                    <CardHeaderContent>
+                        <MudText Typo="Typo.body1">@post.Id</MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+            </MudCard>
+        </MudItem>
+    }
+</MudGrid>
+@code {
+    List<Post> allPosts = new List<Post>();
+    protected override async Task OnInitializedAsync()
+    {
+        var result = await _forum3Client.GetAllPosts.ExecuteAsync();
+        allPosts =  result.Data.AllPosts.Select(c => new Post
+        {
+            Id = c.Id,
+        }).ToList();
+    }
+}

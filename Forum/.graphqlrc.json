@@ -5,6 +5,7 @@
     "strawberryShake": {
       "name": "Forum",
       "url": "https://localhost:5001/api/",
+      "namespace": "ForumApi",
       "dependencyInjection": true,
       "strictSchemaValidation": true,
       "hashAlgorithm": "md5",

@@ -1,4 +1,9 @@
 @page "/counter"
+@using System.Net.Http
+@using System.Net.Http.Json
+@using System.Threading.Tasks
+@using Forum
+@inject HttpClient Http
 
 <PageTitle>Counter</PageTitle>
 
@@ -9,11 +14,18 @@
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
 @code {
+    
     private int currentCount = 0;
 
     private void IncrementCount()
     {
         currentCount++;
     }
+    
+    public class Model
+    {
+        public long Id { get; set; }
+    }
+
 
 }

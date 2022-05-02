@@ -13,6 +13,7 @@
     <SourceRoot Include="C:\Users\mandd\.nuget\packages\" />
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)strawberryshake.codegeneration.csharp.analyzers\12.8.1\build\StrawberryShake.CodeGeneration.CSharp.Analyzers.props" Condition="Exists('$(NuGetPackageRoot)strawberryshake.codegeneration.csharp.analyzers\12.8.1\build\StrawberryShake.CodeGeneration.CSharp.Analyzers.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.components.webassembly\6.0.2\build\net6.0\Microsoft.AspNetCore.Components.WebAssembly.props" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.components.webassembly\6.0.2\build\net6.0\Microsoft.AspNetCore.Components.WebAssembly.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">

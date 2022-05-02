@@ -2,6 +2,76 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "GraphQL/5.1.1": {
+        "type": "package",
+        "dependencies": {
+          "GraphQL-Parser": "8.0.0",
+          "Microsoft.CSharp": "4.7.0",
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
+        "compile": {
+          "lib/net6.0/GraphQL.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/GraphQL.dll": {}
+        }
+      },
+      "GraphQL-Parser/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/GraphQLParser.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/GraphQLParser.dll": {}
+        }
+      },
+      "GraphQL.Client.Abstractions/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "GraphQL.Primitives": "4.0.2",
+          "System.Reactive": "4.3.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/GraphQL.Client.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GraphQL.Client.Abstractions.dll": {}
+        }
+      },
+      "GraphQL.Client.Abstractions.Websocket/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "GraphQL.Client.Abstractions": "4.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/GraphQL.Client.Abstractions.Websocket.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GraphQL.Client.Abstractions.Websocket.dll": {}
+        }
+      },
+      "GraphQL.Client.Serializer.Newtonsoft/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "GraphQL.Client.Abstractions.Websocket": "4.0.2",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/GraphQL.Client.Serializer.Newtonsoft.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GraphQL.Client.Serializer.Newtonsoft.dll": {}
+        }
+      },
+      "GraphQL.Primitives/4.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/GraphQL.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GraphQL.Primitives.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/6.0.2": {
         "type": "package",
         "dependencies": {
@@ -95,6 +165,15 @@
         },
         "runtime": {
           "lib/net6.0/Microsoft.AspNetCore.Metadata.dll": {}
+        }
+      },
+      "Microsoft.CSharp/4.7.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "Microsoft.Extensions.Configuration/6.0.0": {
@@ -238,6 +317,21 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {}
+        }
+      },
       "Microsoft.Extensions.Logging/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -315,6 +409,92 @@
           "lib/net6.0/Microsoft.JSInterop.WebAssembly.dll": {}
         }
       },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "StrawberryShake.CodeGeneration.CSharp.Analyzers/12.8.1": {
+        "type": "package",
+        "dependencies": {
+          "StrawberryShake.Tools.Configuration": "12.8.1"
+        },
+        "build": {
+          "build/StrawberryShake.CodeGeneration.CSharp.Analyzers.props": {},
+          "build/StrawberryShake.CodeGeneration.CSharp.Analyzers.targets": {}
+        }
+      },
+      "StrawberryShake.Core/12.8.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.0",
+          "StrawberryShake.Resources": "12.8.1",
+          "System.Collections.Immutable": "5.0.0"
+        },
+        "compile": {
+          "lib/net6.0/StrawberryShake.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/StrawberryShake.Core.dll": {}
+        }
+      },
+      "StrawberryShake.Resources/12.8.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/StrawberryShake.Resources.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/StrawberryShake.Resources.dll": {}
+        }
+      },
+      "StrawberryShake.Tools.Configuration/12.8.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/net6.0/StrawberryShake.Tools.Configuration.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/StrawberryShake.Tools.Configuration.dll": {}
+        }
+      },
+      "StrawberryShake.Transport.Http/12.8.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.0",
+          "Microsoft.Extensions.Http": "3.1.0",
+          "StrawberryShake.Core": "12.8.1"
+        },
+        "compile": {
+          "lib/net6.0/StrawberryShake.Transport.Http.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/StrawberryShake.Transport.Http.dll": {}
+        }
+      },
+      "System.Collections.Immutable/5.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Collections.Immutable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Collections.Immutable.dll": {}
+        }
+      },
+      "System.ComponentModel.Annotations/4.7.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.1/System.ComponentModel.Annotations.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/System.ComponentModel.Annotations.dll": {}
+        }
+      },
       "System.Diagnostics.DiagnosticSource/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -340,6 +520,18 @@
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "System.Reactive/4.3.2": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.0/System.Reactive.targets": {}
         }
       },
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {
@@ -393,6 +585,76 @@
       }
     },
     "net6.0/browser-wasm": {
+      "GraphQL/5.1.1": {
+        "type": "package",
+        "dependencies": {
+          "GraphQL-Parser": "8.0.0",
+          "Microsoft.CSharp": "4.7.0",
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
+        "compile": {
+          "lib/net6.0/GraphQL.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/GraphQL.dll": {}
+        }
+      },
+      "GraphQL-Parser/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/GraphQLParser.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/GraphQLParser.dll": {}
+        }
+      },
+      "GraphQL.Client.Abstractions/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "GraphQL.Primitives": "4.0.2",
+          "System.Reactive": "4.3.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/GraphQL.Client.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GraphQL.Client.Abstractions.dll": {}
+        }
+      },
+      "GraphQL.Client.Abstractions.Websocket/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "GraphQL.Client.Abstractions": "4.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/GraphQL.Client.Abstractions.Websocket.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GraphQL.Client.Abstractions.Websocket.dll": {}
+        }
+      },
+      "GraphQL.Client.Serializer.Newtonsoft/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "GraphQL.Client.Abstractions.Websocket": "4.0.2",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/GraphQL.Client.Serializer.Newtonsoft.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GraphQL.Client.Serializer.Newtonsoft.dll": {}
+        }
+      },
+      "GraphQL.Primitives/4.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/GraphQL.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GraphQL.Primitives.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/6.0.2": {
         "type": "package",
         "dependencies": {
@@ -486,6 +748,15 @@
         },
         "runtime": {
           "lib/net6.0/Microsoft.AspNetCore.Metadata.dll": {}
+        }
+      },
+      "Microsoft.CSharp/4.7.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "Microsoft.Extensions.Configuration/6.0.0": {
@@ -629,6 +900,21 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {}
+        }
+      },
       "Microsoft.Extensions.Logging/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -706,6 +992,92 @@
           "lib/net6.0/Microsoft.JSInterop.WebAssembly.dll": {}
         }
       },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "StrawberryShake.CodeGeneration.CSharp.Analyzers/12.8.1": {
+        "type": "package",
+        "dependencies": {
+          "StrawberryShake.Tools.Configuration": "12.8.1"
+        },
+        "build": {
+          "build/StrawberryShake.CodeGeneration.CSharp.Analyzers.props": {},
+          "build/StrawberryShake.CodeGeneration.CSharp.Analyzers.targets": {}
+        }
+      },
+      "StrawberryShake.Core/12.8.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.0",
+          "StrawberryShake.Resources": "12.8.1",
+          "System.Collections.Immutable": "5.0.0"
+        },
+        "compile": {
+          "lib/net6.0/StrawberryShake.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/StrawberryShake.Core.dll": {}
+        }
+      },
+      "StrawberryShake.Resources/12.8.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/StrawberryShake.Resources.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/StrawberryShake.Resources.dll": {}
+        }
+      },
+      "StrawberryShake.Tools.Configuration/12.8.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/net6.0/StrawberryShake.Tools.Configuration.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/StrawberryShake.Tools.Configuration.dll": {}
+        }
+      },
+      "StrawberryShake.Transport.Http/12.8.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.0",
+          "Microsoft.Extensions.Http": "3.1.0",
+          "StrawberryShake.Core": "12.8.1"
+        },
+        "compile": {
+          "lib/net6.0/StrawberryShake.Transport.Http.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/StrawberryShake.Transport.Http.dll": {}
+        }
+      },
+      "System.Collections.Immutable/5.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Collections.Immutable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Collections.Immutable.dll": {}
+        }
+      },
+      "System.ComponentModel.Annotations/4.7.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.1/System.ComponentModel.Annotations.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/System.ComponentModel.Annotations.dll": {}
+        }
+      },
       "System.Diagnostics.DiagnosticSource/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -731,6 +1103,18 @@
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "System.Reactive/4.3.2": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.0/System.Reactive.targets": {}
         }
       },
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {
@@ -779,6 +1163,104 @@
     }
   },
   "libraries": {
+    "GraphQL/5.1.1": {
+      "sha512": "D///P5uRa7juUyHk+3oPmrFYT0xGCUiJvvDKL0nbGhQYK/zJgGuhCEcSsUC42Lnx9UPtoQBvq/Md/XG6CHaC6w==",
+      "type": "package",
+      "path": "graphql/5.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "graphql.5.1.1.nupkg.sha512",
+        "graphql.nuspec",
+        "lib/net6.0/GraphQL.dll",
+        "lib/net6.0/GraphQL.xml",
+        "lib/netstandard2.0/GraphQL.dll",
+        "lib/netstandard2.0/GraphQL.xml",
+        "lib/netstandard2.1/GraphQL.dll",
+        "lib/netstandard2.1/GraphQL.xml",
+        "logo.64x64.png"
+      ]
+    },
+    "GraphQL-Parser/8.0.0": {
+      "sha512": "kbAEvS0u240X3eN+5zv2eEVKlYTUhW3OB3JmGvI0ZTfiikyQYbWpt3t25C3aykolZUo2WCxewveeCNP4BHXR9A==",
+      "type": "package",
+      "path": "graphql-parser/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "graphql-parser.8.0.0.nupkg.sha512",
+        "graphql-parser.nuspec",
+        "lib/net6.0/GraphQLParser.dll",
+        "lib/net6.0/GraphQLParser.xml",
+        "lib/netstandard2.0/GraphQLParser.dll",
+        "lib/netstandard2.0/GraphQLParser.xml",
+        "lib/netstandard2.1/GraphQLParser.dll",
+        "lib/netstandard2.1/GraphQLParser.xml",
+        "logo.64x64.png"
+      ]
+    },
+    "GraphQL.Client.Abstractions/4.0.2": {
+      "sha512": "zmtHtejUacIQHAdLEsetDX27mccX0R6MfEu32Ek4l6pprJe3zdtqx+UuWz3wSmrIaj05NLEe5FCHNTjhm3MnjA==",
+      "type": "package",
+      "path": "graphql.client.abstractions/4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "graphql.client.abstractions.4.0.2.nupkg.sha512",
+        "graphql.client.abstractions.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/GraphQL.Client.Abstractions.dll",
+        "lib/netstandard2.0/GraphQL.Client.Abstractions.xml"
+      ]
+    },
+    "GraphQL.Client.Abstractions.Websocket/4.0.2": {
+      "sha512": "1JDpd1HgvytSWf7/v1TMJ1EXm6oVuga+lJWY9b9RtmGDjEtmFLxP1663/KLe5vTMzXRpxx3saOkkjikHhQOn3w==",
+      "type": "package",
+      "path": "graphql.client.abstractions.websocket/4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "graphql.client.abstractions.websocket.4.0.2.nupkg.sha512",
+        "graphql.client.abstractions.websocket.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/GraphQL.Client.Abstractions.Websocket.dll",
+        "lib/netstandard2.0/GraphQL.Client.Abstractions.Websocket.xml"
+      ]
+    },
+    "GraphQL.Client.Serializer.Newtonsoft/4.0.2": {
+      "sha512": "sS/B6D8cfvDpPUS1xzW667M6jrHwJ8URAY5DWfoDt1Pvy+8H4m5YNhYLWjfhzp8GzwOqH8NYISBFqQkwTVCZuw==",
+      "type": "package",
+      "path": "graphql.client.serializer.newtonsoft/4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "graphql.client.serializer.newtonsoft.4.0.2.nupkg.sha512",
+        "graphql.client.serializer.newtonsoft.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/GraphQL.Client.Serializer.Newtonsoft.dll",
+        "lib/netstandard2.0/GraphQL.Client.Serializer.Newtonsoft.xml"
+      ]
+    },
+    "GraphQL.Primitives/4.0.2": {
+      "sha512": "+E7WLhaBahp+gKmavi/X/mwVXZUIl+VjVA5MKyzSOf3Zzo8DJCxvjsfybmosIRXee4Xk2YQKA+bKlPVuf1MG8g==",
+      "type": "package",
+      "path": "graphql.primitives/4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "graphql.primitives.4.0.2.nupkg.sha512",
+        "graphql.primitives.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/GraphQL.Primitives.dll",
+        "lib/netstandard2.0/GraphQL.Primitives.xml"
+      ]
+    },
     "Microsoft.AspNetCore.Authorization/6.0.2": {
       "sha512": "AjwO1PjN75weiC0KzznybEZh5rr+VjH3c2wvuRT6Qmd8cv2+/6hBn/peelGkZUzYBY0l7QA22jwmjKKeeNYsIQ==",
       "type": "package",
@@ -1017,6 +1499,75 @@
         "microsoft.aspnetcore.metadata.nuspec"
       ]
     },
+    "Microsoft.CSharp/4.7.0": {
+      "sha512": "pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
+      "type": "package",
+      "path": "microsoft.csharp/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/Microsoft.CSharp.dll",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.3/Microsoft.CSharp.dll",
+        "lib/netstandard2.0/Microsoft.CSharp.dll",
+        "lib/netstandard2.0/Microsoft.CSharp.xml",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/uap10.0.16299/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "microsoft.csharp.4.7.0.nupkg.sha512",
+        "microsoft.csharp.nuspec",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/Microsoft.CSharp.dll",
+        "ref/netcore50/Microsoft.CSharp.xml",
+        "ref/netcore50/de/Microsoft.CSharp.xml",
+        "ref/netcore50/es/Microsoft.CSharp.xml",
+        "ref/netcore50/fr/Microsoft.CSharp.xml",
+        "ref/netcore50/it/Microsoft.CSharp.xml",
+        "ref/netcore50/ja/Microsoft.CSharp.xml",
+        "ref/netcore50/ko/Microsoft.CSharp.xml",
+        "ref/netcore50/ru/Microsoft.CSharp.xml",
+        "ref/netcore50/zh-hans/Microsoft.CSharp.xml",
+        "ref/netcore50/zh-hant/Microsoft.CSharp.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/Microsoft.CSharp.dll",
+        "ref/netstandard1.0/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/de/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/es/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/fr/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/it/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ja/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ko/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ru/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/zh-hans/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/zh-hant/Microsoft.CSharp.xml",
+        "ref/netstandard2.0/Microsoft.CSharp.dll",
+        "ref/netstandard2.0/Microsoft.CSharp.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/uap10.0.16299/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "Microsoft.Extensions.Configuration/6.0.0": {
       "sha512": "tq2wXyh3fL17EMF2bXgRhU7JrbO3on93MRKYxzz4JzzvuGSA1l0W3GI9/tl8EO89TH+KWEymP7bcFway6z9fXg==",
       "type": "package",
@@ -1233,6 +1784,25 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Microsoft.Extensions.Http/6.0.0": {
+      "sha512": "15+pa2G0bAMHbHewaQIdr/y6ag2H3yh4rd9hTXavtWDzQBkvpe2RMqFg8BxDpcQWssmjmBApGPcw93QRz6YcMg==",
+      "type": "package",
+      "path": "microsoft.extensions.http/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.Http.dll",
+        "lib/net461/Microsoft.Extensions.Http.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Http.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Http.xml",
+        "microsoft.extensions.http.6.0.0.nupkg.sha512",
+        "microsoft.extensions.http.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "Microsoft.Extensions.Logging/6.0.0": {
       "sha512": "eIbyj40QDg1NDz0HBW0S5f3wrLVnKWnDJ/JtZ+yJDFnDj90VoPuoPmFkeaXrtu+0cKm5GRAwoDf+dBWXK0TUdg==",
       "type": "package",
@@ -1382,6 +1952,335 @@
         "microsoft.jsinterop.webassembly.nuspec"
       ]
     },
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "StrawberryShake.CodeGeneration.CSharp.Analyzers/12.8.1": {
+      "sha512": "6z6t0qeKCNkR7Pp2cA00Myh5dwHY0kfHDbcoXhvqTzMQ8P6atMUpfS/H0rj/hYytZu+Qw46WlIerXuLOBuD/AA==",
+      "type": "package",
+      "path": "strawberryshake.codegeneration.csharp.analyzers/12.8.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "analyzers/dotnet/cs/DotNet.Glob.dll",
+        "analyzers/dotnet/cs/GreenDonut.dll",
+        "analyzers/dotnet/cs/HotChocolate.Abstractions.dll",
+        "analyzers/dotnet/cs/HotChocolate.Execution.dll",
+        "analyzers/dotnet/cs/HotChocolate.Fetching.dll",
+        "analyzers/dotnet/cs/HotChocolate.Language.SyntaxTree.dll",
+        "analyzers/dotnet/cs/HotChocolate.Language.Utf8.dll",
+        "analyzers/dotnet/cs/HotChocolate.Language.Visitors.dll",
+        "analyzers/dotnet/cs/HotChocolate.Language.dll",
+        "analyzers/dotnet/cs/HotChocolate.Stitching.Abstractions.dll",
+        "analyzers/dotnet/cs/HotChocolate.Stitching.dll",
+        "analyzers/dotnet/cs/HotChocolate.Subscriptions.InMemory.dll",
+        "analyzers/dotnet/cs/HotChocolate.Subscriptions.dll",
+        "analyzers/dotnet/cs/HotChocolate.Types.CursorPagination.dll",
+        "analyzers/dotnet/cs/HotChocolate.Types.Mutations.dll",
+        "analyzers/dotnet/cs/HotChocolate.Types.OffsetPagination.dll",
+        "analyzers/dotnet/cs/HotChocolate.Types.dll",
+        "analyzers/dotnet/cs/HotChocolate.Utilities.Introspection.dll",
+        "analyzers/dotnet/cs/HotChocolate.Utilities.dll",
+        "analyzers/dotnet/cs/HotChocolate.Validation.dll",
+        "analyzers/dotnet/cs/Humanizer.dll",
+        "analyzers/dotnet/cs/Microsoft.Bcl.AsyncInterfaces.dll",
+        "analyzers/dotnet/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.dll",
+        "analyzers/dotnet/cs/Microsoft.CodeAnalysis.CSharp.dll",
+        "analyzers/dotnet/cs/Microsoft.CodeAnalysis.Workspaces.dll",
+        "analyzers/dotnet/cs/Microsoft.CodeAnalysis.dll",
+        "analyzers/dotnet/cs/Microsoft.Extensions.Configuration.Abstractions.dll",
+        "analyzers/dotnet/cs/Microsoft.Extensions.Configuration.Binder.dll",
+        "analyzers/dotnet/cs/Microsoft.Extensions.Configuration.dll",
+        "analyzers/dotnet/cs/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "analyzers/dotnet/cs/Microsoft.Extensions.DependencyInjection.dll",
+        "analyzers/dotnet/cs/Microsoft.Extensions.DiagnosticAdapter.dll",
+        "analyzers/dotnet/cs/Microsoft.Extensions.Http.dll",
+        "analyzers/dotnet/cs/Microsoft.Extensions.Logging.Abstractions.dll",
+        "analyzers/dotnet/cs/Microsoft.Extensions.Logging.dll",
+        "analyzers/dotnet/cs/Microsoft.Extensions.ObjectPool.dll",
+        "analyzers/dotnet/cs/Microsoft.Extensions.Options.dll",
+        "analyzers/dotnet/cs/Microsoft.Extensions.Primitives.dll",
+        "analyzers/dotnet/cs/Newtonsoft.Json.dll",
+        "analyzers/dotnet/cs/StrawberryShake.CodeGeneration.CSharp.Analyzers.dll",
+        "analyzers/dotnet/cs/StrawberryShake.CodeGeneration.CSharp.dll",
+        "analyzers/dotnet/cs/StrawberryShake.CodeGeneration.dll",
+        "analyzers/dotnet/cs/StrawberryShake.Resources.dll",
+        "analyzers/dotnet/cs/StrawberryShake.Tools.Configuration.dll",
+        "analyzers/dotnet/cs/System.Buffers.dll",
+        "analyzers/dotnet/cs/System.Collections.Immutable.dll",
+        "analyzers/dotnet/cs/System.ComponentModel.Annotations.dll",
+        "analyzers/dotnet/cs/System.Composition.AttributedModel.dll",
+        "analyzers/dotnet/cs/System.Composition.Convention.dll",
+        "analyzers/dotnet/cs/System.Composition.Hosting.dll",
+        "analyzers/dotnet/cs/System.Composition.Runtime.dll",
+        "analyzers/dotnet/cs/System.Composition.TypedParts.dll",
+        "analyzers/dotnet/cs/System.Diagnostics.DiagnosticSource.dll",
+        "analyzers/dotnet/cs/System.Linq.Expressions.dll",
+        "analyzers/dotnet/cs/System.Linq.dll",
+        "analyzers/dotnet/cs/System.Memory.dll",
+        "analyzers/dotnet/cs/System.Numerics.Vectors.dll",
+        "analyzers/dotnet/cs/System.ObjectModel.dll",
+        "analyzers/dotnet/cs/System.Reflection.Emit.ILGeneration.dll",
+        "analyzers/dotnet/cs/System.Reflection.Emit.Lightweight.dll",
+        "analyzers/dotnet/cs/System.Reflection.Emit.dll",
+        "analyzers/dotnet/cs/System.Reflection.Metadata.dll",
+        "analyzers/dotnet/cs/System.Reflection.TypeExtensions.dll",
+        "analyzers/dotnet/cs/System.Runtime.CompilerServices.Unsafe.dll",
+        "analyzers/dotnet/cs/System.Text.Encoding.CodePages.dll",
+        "analyzers/dotnet/cs/System.Text.Encodings.Web.dll",
+        "analyzers/dotnet/cs/System.Text.Json.dll",
+        "analyzers/dotnet/cs/System.Threading.Channels.dll",
+        "analyzers/dotnet/cs/System.Threading.Tasks.Extensions.dll",
+        "analyzers/dotnet/cs/System.Threading.dll",
+        "build/GraphQL.xaml",
+        "build/StrawberryShake.CodeGeneration.CSharp.Analyzers.props",
+        "build/StrawberryShake.CodeGeneration.CSharp.Analyzers.targets",
+        "build/VSCode.targets",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "strawberryshake-signet.png",
+        "strawberryshake.codegeneration.csharp.analyzers.12.8.1.nupkg.sha512",
+        "strawberryshake.codegeneration.csharp.analyzers.nuspec"
+      ]
+    },
+    "StrawberryShake.Core/12.8.1": {
+      "sha512": "h2us+g1uvCASSINrEGmVDOv0owEsYzXYHMdeotB2+OZmOZC0KzHO/9+yxr7y9jYSL8dYOS484JHTjVNPXnKlkw==",
+      "type": "package",
+      "path": "strawberryshake.core/12.8.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "lib/net5.0/StrawberryShake.Core.dll",
+        "lib/net5.0/StrawberryShake.Core.xml",
+        "lib/net6.0/StrawberryShake.Core.dll",
+        "lib/net6.0/StrawberryShake.Core.xml",
+        "lib/netcoreapp3.1/StrawberryShake.Core.dll",
+        "lib/netcoreapp3.1/StrawberryShake.Core.xml",
+        "lib/netstandard2.0/StrawberryShake.Core.dll",
+        "lib/netstandard2.0/StrawberryShake.Core.xml",
+        "lib/netstandard2.1/StrawberryShake.Core.dll",
+        "lib/netstandard2.1/StrawberryShake.Core.xml",
+        "strawberryshake-signet.png",
+        "strawberryshake.core.12.8.1.nupkg.sha512",
+        "strawberryshake.core.nuspec"
+      ]
+    },
+    "StrawberryShake.Resources/12.8.1": {
+      "sha512": "5H7Bw8XgGYOFJCzN9P6AjfZGjENMODE2DvlAjbN/vVHu4XAoYo+qxKVVVTof3bipqWBvs/rtXlf3SfsFyUKNnw==",
+      "type": "package",
+      "path": "strawberryshake.resources/12.8.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "lib/net5.0/StrawberryShake.Resources.dll",
+        "lib/net5.0/StrawberryShake.Resources.xml",
+        "lib/net6.0/StrawberryShake.Resources.dll",
+        "lib/net6.0/StrawberryShake.Resources.xml",
+        "lib/netcoreapp3.1/StrawberryShake.Resources.dll",
+        "lib/netcoreapp3.1/StrawberryShake.Resources.xml",
+        "lib/netstandard2.0/StrawberryShake.Resources.dll",
+        "lib/netstandard2.0/StrawberryShake.Resources.xml",
+        "lib/netstandard2.1/StrawberryShake.Resources.dll",
+        "lib/netstandard2.1/StrawberryShake.Resources.xml",
+        "strawberryshake-signet.png",
+        "strawberryshake.resources.12.8.1.nupkg.sha512",
+        "strawberryshake.resources.nuspec"
+      ]
+    },
+    "StrawberryShake.Tools.Configuration/12.8.1": {
+      "sha512": "A5zvEiBGBhn6AWushT94n1M2apMVQNpbMljM5FBA3aBv5ro61GAXv6XRglhd47I7frdSOmoQvo5X0IOvgJhpFw==",
+      "type": "package",
+      "path": "strawberryshake.tools.configuration/12.8.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "lib/net6.0/StrawberryShake.Tools.Configuration.dll",
+        "lib/net6.0/StrawberryShake.Tools.Configuration.xml",
+        "lib/netstandard2.0/StrawberryShake.Tools.Configuration.dll",
+        "lib/netstandard2.0/StrawberryShake.Tools.Configuration.xml",
+        "strawberryshake-signet.png",
+        "strawberryshake.tools.configuration.12.8.1.nupkg.sha512",
+        "strawberryshake.tools.configuration.nuspec"
+      ]
+    },
+    "StrawberryShake.Transport.Http/12.8.1": {
+      "sha512": "UAZ315QwCdKPJtLFp95NXW5PwZ3D8iWMDm+J6Z/AFjkQ17BwNYjv8zBrnC2aghV2Z1s4AAgIyb+8sx1kqBGvPw==",
+      "type": "package",
+      "path": "strawberryshake.transport.http/12.8.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "lib/net5.0/StrawberryShake.Transport.Http.dll",
+        "lib/net5.0/StrawberryShake.Transport.Http.xml",
+        "lib/net6.0/StrawberryShake.Transport.Http.dll",
+        "lib/net6.0/StrawberryShake.Transport.Http.xml",
+        "lib/netcoreapp3.1/StrawberryShake.Transport.Http.dll",
+        "lib/netcoreapp3.1/StrawberryShake.Transport.Http.xml",
+        "lib/netstandard2.0/StrawberryShake.Transport.Http.dll",
+        "lib/netstandard2.0/StrawberryShake.Transport.Http.xml",
+        "lib/netstandard2.1/StrawberryShake.Transport.Http.dll",
+        "lib/netstandard2.1/StrawberryShake.Transport.Http.xml",
+        "strawberryshake-signet.png",
+        "strawberryshake.transport.http.12.8.1.nupkg.sha512",
+        "strawberryshake.transport.http.nuspec"
+      ]
+    },
+    "System.Collections.Immutable/5.0.0": {
+      "sha512": "FXkLXiK0sVVewcso0imKQoOxjoPAj42R8HtjjbSjVPAzwDfzoyoznWxgA3c38LDbN9SJux1xXoXYAhz98j7r2g==",
+      "type": "package",
+      "path": "system.collections.immutable/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Collections.Immutable.dll",
+        "lib/net461/System.Collections.Immutable.xml",
+        "lib/netstandard1.0/System.Collections.Immutable.dll",
+        "lib/netstandard1.0/System.Collections.Immutable.xml",
+        "lib/netstandard1.3/System.Collections.Immutable.dll",
+        "lib/netstandard1.3/System.Collections.Immutable.xml",
+        "lib/netstandard2.0/System.Collections.Immutable.dll",
+        "lib/netstandard2.0/System.Collections.Immutable.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.xml",
+        "system.collections.immutable.5.0.0.nupkg.sha512",
+        "system.collections.immutable.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.ComponentModel.Annotations/4.7.0": {
+      "sha512": "0YFqjhp/mYkDGpU0Ye1GjE53HMp9UVfGN7seGpAMttAC0C40v5gw598jCgpbBLMmCo0E5YRLBv5Z2doypO49ZQ==",
+      "type": "package",
+      "path": "system.componentmodel.annotations/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/net461/System.ComponentModel.Annotations.dll",
+        "lib/netcore50/System.ComponentModel.Annotations.dll",
+        "lib/netstandard1.4/System.ComponentModel.Annotations.dll",
+        "lib/netstandard2.0/System.ComponentModel.Annotations.dll",
+        "lib/netstandard2.1/System.ComponentModel.Annotations.dll",
+        "lib/netstandard2.1/System.ComponentModel.Annotations.xml",
+        "lib/portable-net45+win8/_._",
+        "lib/win8/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/net461/System.ComponentModel.Annotations.dll",
+        "ref/net461/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/System.ComponentModel.Annotations.dll",
+        "ref/netcore50/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/de/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/es/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/fr/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/it/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/ja/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/ko/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/ru/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/System.ComponentModel.Annotations.dll",
+        "ref/netstandard1.1/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/de/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/es/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/fr/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/it/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/ja/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/ko/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/ru/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/System.ComponentModel.Annotations.dll",
+        "ref/netstandard1.3/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/de/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/es/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/fr/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/it/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/ja/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/ko/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/ru/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/System.ComponentModel.Annotations.dll",
+        "ref/netstandard1.4/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/de/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/es/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/fr/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/it/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/ja/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/ko/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/ru/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard2.0/System.ComponentModel.Annotations.dll",
+        "ref/netstandard2.0/System.ComponentModel.Annotations.xml",
+        "ref/netstandard2.1/System.ComponentModel.Annotations.dll",
+        "ref/netstandard2.1/System.ComponentModel.Annotations.xml",
+        "ref/portable-net45+win8/_._",
+        "ref/win8/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.componentmodel.annotations.4.7.0.nupkg.sha512",
+        "system.componentmodel.annotations.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Diagnostics.DiagnosticSource/6.0.0": {
       "sha512": "frQDfv0rl209cKm1lnwTgFPzNigy2EKk1BS3uAvHvlBVKe5cymGyHO+Sj+NLv5VF/AhHsqPIUUwya5oV4CHMUw==",
       "type": "package",
@@ -1430,6 +2329,32 @@
         "system.io.pipelines.6.0.2.nupkg.sha512",
         "system.io.pipelines.nuspec",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Reactive/4.3.2": {
+      "sha512": "WhGkScPWxw2pp7UwRW8M1OvYZ3WUDPC2wJ0aiuaB4KRD3bt4wLkgHgYnOUu87WRhsurvv5LN0E63iWOEza2o8g==",
+      "type": "package",
+      "path": "system.reactive/4.3.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/netcoreapp3.0/System.Reactive.dll",
+        "build/netcoreapp3.0/System.Reactive.targets",
+        "build/netcoreapp3.0/System.Reactive.xml",
+        "buildTransitive/netcoreapp3.0/System.Reactive.targets",
+        "lib/net46/System.Reactive.dll",
+        "lib/net46/System.Reactive.xml",
+        "lib/netcoreapp3.0/_._",
+        "lib/netstandard2.0/System.Reactive.dll",
+        "lib/netstandard2.0/System.Reactive.xml",
+        "lib/uap10.0.16299/System.Reactive.dll",
+        "lib/uap10.0.16299/System.Reactive.pri",
+        "lib/uap10.0.16299/System.Reactive.xml",
+        "lib/uap10.0/System.Reactive.dll",
+        "lib/uap10.0/System.Reactive.pri",
+        "lib/uap10.0/System.Reactive.xml",
+        "system.reactive.4.3.2.nupkg.sha512",
+        "system.reactive.nuspec"
       ]
     },
     "System.Runtime.CompilerServices.Unsafe/6.0.0": {
@@ -1541,8 +2466,14 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "GraphQL.Client.Serializer.Newtonsoft >= 4.0.2",
+      "Graphql >= 5.1.1",
       "Microsoft.AspNetCore.Components.WebAssembly >= 6.0.2",
-      "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 6.0.2"
+      "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 6.0.2",
+      "Microsoft.Extensions.DependencyInjection >= 6.0.0",
+      "Microsoft.Extensions.Http >= 6.0.0",
+      "StrawberryShake.CodeGeneration.CSharp.Analyzers >= 12.8.1",
+      "StrawberryShake.Transport.Http >= 12.8.1"
     ]
   },
   "packageFolders": {
@@ -1582,6 +2513,14 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "GraphQL.Client.Serializer.Newtonsoft": {
+            "target": "Package",
+            "version": "[4.0.2, )"
+          },
+          "Graphql": {
+            "target": "Package",
+            "version": "[5.1.1, )"
+          },
           "Microsoft.AspNetCore.Components.WebAssembly": {
             "target": "Package",
             "version": "[6.0.2, )"
@@ -1590,6 +2529,22 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[6.0.2, )"
+          },
+          "Microsoft.Extensions.DependencyInjection": {
+            "target": "Package",
+            "version": "[6.0.0, )"
+          },
+          "Microsoft.Extensions.Http": {
+            "target": "Package",
+            "version": "[6.0.0, )"
+          },
+          "StrawberryShake.CodeGeneration.CSharp.Analyzers": {
+            "target": "Package",
+            "version": "[12.8.1, )"
+          },
+          "StrawberryShake.Transport.Http": {
+            "target": "Package",
+            "version": "[12.8.1, )"
           }
         },
         "imports": [

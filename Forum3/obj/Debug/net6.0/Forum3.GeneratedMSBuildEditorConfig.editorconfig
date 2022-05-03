@@ -24,7 +24,19 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\mandd\RiderProjects\Forum\Forum3
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/mandd/RiderProjects/Forum/Forum3/Forum3GqlShema/GetAllComments.graphql]
+build_metadata.AdditionalFiles.GraphQL = true
+build_metadata.AdditionalFiles.GraphQLConfig = 
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/mandd/RiderProjects/Forum/Forum3/Forum3GqlShema/GetAllPosts.graphql]
+build_metadata.AdditionalFiles.GraphQL = true
+build_metadata.AdditionalFiles.GraphQLConfig = 
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mandd/RiderProjects/Forum/Forum3/Forum3GqlShema/GetAllUsers.graphql]
 build_metadata.AdditionalFiles.GraphQL = true
 build_metadata.AdditionalFiles.GraphQLConfig = 
 build_metadata.AdditionalFiles.TargetPath = 
@@ -66,12 +78,6 @@ build_metadata.AdditionalFiles.GraphQLConfig =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mandd/RiderProjects/Forum/Forum3/Pages/Index.razor]
-build_metadata.AdditionalFiles.GraphQL = 
-build_metadata.AdditionalFiles.GraphQLConfig = 
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/mandd/RiderProjects/Forum/Forum3/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.GraphQL = 
 build_metadata.AdditionalFiles.GraphQLConfig = 
@@ -89,3 +95,9 @@ build_metadata.AdditionalFiles.GraphQL =
 build_metadata.AdditionalFiles.GraphQLConfig = 
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mandd/RiderProjects/Forum/Forum3/Pages/Index.razor]
+build_metadata.AdditionalFiles.GraphQL = 
+build_metadata.AdditionalFiles.GraphQLConfig = 
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-52o9tms3qf

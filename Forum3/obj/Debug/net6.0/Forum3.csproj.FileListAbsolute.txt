@@ -836,3 +836,5 @@ C:\Users\mandd\RiderProjects\Forum\Forum3\obj\Debug\net6.0\Forum3.csproj.CopyCom
 C:\Users\mandd\RiderProjects\Forum\Forum3\obj\Debug\net6.0\Forum3.dll
 C:\Users\mandd\RiderProjects\Forum\Forum3\obj\Debug\net6.0\ref\Forum3.dll
 C:\Users\mandd\RiderProjects\Forum\Forum3\obj\Debug\net6.0\Forum3.pdb
+C:\Users\mandd\RiderProjects\Forum\Forum3\obj\Debug\net6.0\scopedcss\Pages\Index.razor.rz.scp.css
+C:\Users\mandd\RiderProjects\Forum\Forum3\obj\Debug\net6.0\scopedcss\projectbundle\Forum3.bundle.scp.css

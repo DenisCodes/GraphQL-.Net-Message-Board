@@ -1,10 +1,10 @@
 ﻿namespace Forum3.Data;
 
-public class Post
+public class Comment
 {
-    public string Title { get; set; }
-    public string Content { get; set; }
+    public string Message { get; set; }
     public DateTimeOffset CreatedDateTime { get; set; }
     public int UserId { get; set; }
+    public int PostId { get; set; }
     public int Id { get; set; }
 }

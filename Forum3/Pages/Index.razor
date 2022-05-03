@@ -16,6 +16,28 @@
         </MudItem>
     }
 </MudGrid>
+    
+
+<MudSimpleTable Hover="true" Style="overflow-x: auto;">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Date Posted</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var post in allPosts)
+            {
+                <tr>
+                    <td>@post.Title</td>
+                    <td>@post.Content</td>
+                    <td>@post.CreatedDateTime</td>
+                </tr>
+            }
+        </tbody>
+    </MudSimpleTable>
+
 @code {
     List<Post> allPosts = new List<Post>();
     protected override async Task OnInitializedAsync()
@@ -23,6 +45,10 @@
         var result = await _forum3Client.GetAllPosts.ExecuteAsync();
         allPosts =  result.Data.AllPosts.Select(c => new Post
         {
+            Title = c.Title,
+            Content = c.Content,
+            CreatedDateTime = c.CreatedDateTime,
+            UserId = c.UserId,
             Id = c.Id,
         }).ToList();
     }

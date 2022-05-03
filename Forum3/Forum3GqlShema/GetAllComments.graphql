@@ -1,0 +1,9 @@
+query GetAllComments{
+    allComments{
+      message
+      createdDateTime
+      userId
+      postId
+      id
+    }
+}

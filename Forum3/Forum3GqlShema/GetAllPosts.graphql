@@ -1,5 +1,9 @@
 query GetAllPosts{
     allPosts{
-        id
+      title
+      content
+      createdDateTime
+      userId
+      id
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8cSWp6OXLGb9N3nw17LrYJS95xch3HqpgrTIuyma/4E=",
+  "Hash": "97sonqcrnwIv3EaUEvlJBI373cGvjBYrZkBrYs4yIrQ=",
   "Source": "Forum3",
   "BasePath": "/",
   "Mode": "Root",
@@ -7070,6 +7070,40 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\mandd\\RiderProjects\\Forum\\Forum3\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Globalization.Calendars.dll"
+    },
+    {
+      "Identity": "C:\\Users\\mandd\\RiderProjects\\Forum\\Forum3\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Forum3.styles.css",
+      "SourceId": "Forum3",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\mandd\\RiderProjects\\Forum\\Forum3\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "BasePath": "/",
+      "RelativePath": "Forum3.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\mandd\\RiderProjects\\Forum\\Forum3\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Forum3.styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\mandd\\RiderProjects\\Forum\\Forum3\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Forum3.bundle.scp.css",
+      "SourceId": "Forum3",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\mandd\\RiderProjects\\Forum\\Forum3\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "BasePath": "/",
+      "RelativePath": "Forum3.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\mandd\\RiderProjects\\Forum\\Forum3\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Forum3.bundle.scp.css"
     },
     {
       "Identity": "C:\\Users\\mandd\\RiderProjects\\Forum\\Forum3\\wwwroot\\favicon.ico",

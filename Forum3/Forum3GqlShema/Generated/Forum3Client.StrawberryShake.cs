@@ -4,6 +4,352 @@
 namespace Forum3Server
 {
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
+    public partial class GetAllCommentsResult : global::System.IEquatable<GetAllCommentsResult>, IGetAllCommentsResult
+    {
+        public GetAllCommentsResult(global::System.Collections.Generic.IReadOnlyList<global::Forum3Server.IGetAllComments_AllComments?>? allComments)
+        {
+            AllComments = allComments;
+        }
+
+        public global::System.Collections.Generic.IReadOnlyList<global::Forum3Server.IGetAllComments_AllComments?>? AllComments { get; }
+
+        public virtual global::System.Boolean Equals(GetAllCommentsResult? other)
+        {
+            if (ReferenceEquals(null, other))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, other))
+            {
+                return true;
+            }
+
+            if (other.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return (global::StrawberryShake.Helper.ComparisonHelper.SequenceEqual(AllComments, other.AllComments));
+        }
+
+        public override global::System.Boolean Equals(global::System.Object? obj)
+        {
+            if (ReferenceEquals(null, obj))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (obj.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return Equals((GetAllCommentsResult)obj);
+        }
+
+        public override global::System.Int32 GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 5;
+                if (AllComments != null)
+                {
+                    foreach (var AllComments_elm in AllComments)
+                    {
+                        if (AllComments_elm != null)
+                        {
+                            hash ^= 397 * AllComments_elm.GetHashCode();
+                        }
+                    }
+                }
+
+                return hash;
+            }
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
+    public partial class GetAllComments_AllComments_Comment : global::System.IEquatable<GetAllComments_AllComments_Comment>, IGetAllComments_AllComments_Comment
+    {
+        public GetAllComments_AllComments_Comment(global::System.String? message, global::System.DateTimeOffset createdDateTime, global::System.Int32 userId, global::System.Int32 postId, global::System.Int32 id)
+        {
+            Message = message;
+            CreatedDateTime = createdDateTime;
+            UserId = userId;
+            PostId = postId;
+            Id = id;
+        }
+
+        public global::System.String? Message { get; }
+
+        public global::System.DateTimeOffset CreatedDateTime { get; }
+
+        public global::System.Int32 UserId { get; }
+
+        public global::System.Int32 PostId { get; }
+
+        public global::System.Int32 Id { get; }
+
+        public virtual global::System.Boolean Equals(GetAllComments_AllComments_Comment? other)
+        {
+            if (ReferenceEquals(null, other))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, other))
+            {
+                return true;
+            }
+
+            if (other.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return (((Message is null && other.Message is null) || Message != null && Message.Equals(other.Message))) && CreatedDateTime.Equals(other.CreatedDateTime) && UserId == other.UserId && PostId == other.PostId && Id == other.Id;
+        }
+
+        public override global::System.Boolean Equals(global::System.Object? obj)
+        {
+            if (ReferenceEquals(null, obj))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (obj.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return Equals((GetAllComments_AllComments_Comment)obj);
+        }
+
+        public override global::System.Int32 GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 5;
+                if (Message != null)
+                {
+                    hash ^= 397 * Message.GetHashCode();
+                }
+
+                hash ^= 397 * CreatedDateTime.GetHashCode();
+                hash ^= 397 * UserId.GetHashCode();
+                hash ^= 397 * PostId.GetHashCode();
+                hash ^= 397 * Id.GetHashCode();
+                return hash;
+            }
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
+    public partial interface IGetAllCommentsResult
+    {
+        public global::System.Collections.Generic.IReadOnlyList<global::Forum3Server.IGetAllComments_AllComments?>? AllComments { get; }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
+    public partial interface IGetAllComments_AllComments
+    {
+        public global::System.String? Message { get; }
+
+        public global::System.DateTimeOffset CreatedDateTime { get; }
+
+        public global::System.Int32 UserId { get; }
+
+        public global::System.Int32 PostId { get; }
+
+        public global::System.Int32 Id { get; }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
+    public partial interface IGetAllComments_AllComments_Comment : IGetAllComments_AllComments
+    {
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
+    public partial class GetAllUsersResult : global::System.IEquatable<GetAllUsersResult>, IGetAllUsersResult
+    {
+        public GetAllUsersResult(global::System.Collections.Generic.IReadOnlyList<global::Forum3Server.IGetAllUsers_AllUsers?>? allUsers)
+        {
+            AllUsers = allUsers;
+        }
+
+        public global::System.Collections.Generic.IReadOnlyList<global::Forum3Server.IGetAllUsers_AllUsers?>? AllUsers { get; }
+
+        public virtual global::System.Boolean Equals(GetAllUsersResult? other)
+        {
+            if (ReferenceEquals(null, other))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, other))
+            {
+                return true;
+            }
+
+            if (other.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return (global::StrawberryShake.Helper.ComparisonHelper.SequenceEqual(AllUsers, other.AllUsers));
+        }
+
+        public override global::System.Boolean Equals(global::System.Object? obj)
+        {
+            if (ReferenceEquals(null, obj))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (obj.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return Equals((GetAllUsersResult)obj);
+        }
+
+        public override global::System.Int32 GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 5;
+                if (AllUsers != null)
+                {
+                    foreach (var AllUsers_elm in AllUsers)
+                    {
+                        if (AllUsers_elm != null)
+                        {
+                            hash ^= 397 * AllUsers_elm.GetHashCode();
+                        }
+                    }
+                }
+
+                return hash;
+            }
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
+    public partial class GetAllUsers_AllUsers_User : global::System.IEquatable<GetAllUsers_AllUsers_User>, IGetAllUsers_AllUsers_User
+    {
+        public GetAllUsers_AllUsers_User(global::System.String? firstName, global::System.String? lastName, global::System.Int32 id)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            Id = id;
+        }
+
+        public global::System.String? FirstName { get; }
+
+        public global::System.String? LastName { get; }
+
+        public global::System.Int32 Id { get; }
+
+        public virtual global::System.Boolean Equals(GetAllUsers_AllUsers_User? other)
+        {
+            if (ReferenceEquals(null, other))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, other))
+            {
+                return true;
+            }
+
+            if (other.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return (((FirstName is null && other.FirstName is null) || FirstName != null && FirstName.Equals(other.FirstName))) && ((LastName is null && other.LastName is null) || LastName != null && LastName.Equals(other.LastName)) && Id == other.Id;
+        }
+
+        public override global::System.Boolean Equals(global::System.Object? obj)
+        {
+            if (ReferenceEquals(null, obj))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (obj.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return Equals((GetAllUsers_AllUsers_User)obj);
+        }
+
+        public override global::System.Int32 GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 5;
+                if (FirstName != null)
+                {
+                    hash ^= 397 * FirstName.GetHashCode();
+                }
+
+                if (LastName != null)
+                {
+                    hash ^= 397 * LastName.GetHashCode();
+                }
+
+                hash ^= 397 * Id.GetHashCode();
+                return hash;
+            }
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
+    public partial interface IGetAllUsersResult
+    {
+        public global::System.Collections.Generic.IReadOnlyList<global::Forum3Server.IGetAllUsers_AllUsers?>? AllUsers { get; }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
+    public partial interface IGetAllUsers_AllUsers
+    {
+        public global::System.String? FirstName { get; }
+
+        public global::System.String? LastName { get; }
+
+        public global::System.Int32 Id { get; }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
+    public partial interface IGetAllUsers_AllUsers_User : IGetAllUsers_AllUsers
+    {
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
     public partial class GetAllPostsResult : global::System.IEquatable<GetAllPostsResult>, IGetAllPostsResult
     {
         public GetAllPostsResult(global::System.Collections.Generic.IReadOnlyList<global::Forum3Server.IGetAllPosts_AllPosts?>? allPosts)
@@ -77,10 +423,22 @@ namespace Forum3Server
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
     public partial class GetAllPosts_AllPosts_Post : global::System.IEquatable<GetAllPosts_AllPosts_Post>, IGetAllPosts_AllPosts_Post
     {
-        public GetAllPosts_AllPosts_Post(global::System.Int32 id)
+        public GetAllPosts_AllPosts_Post(global::System.String title, global::System.String content, global::System.DateTimeOffset createdDateTime, global::System.Int32 userId, global::System.Int32 id)
         {
+            Title = title;
+            Content = content;
+            CreatedDateTime = createdDateTime;
+            UserId = userId;
             Id = id;
         }
+
+        public global::System.String Title { get; }
+
+        public global::System.String Content { get; }
+
+        public global::System.DateTimeOffset CreatedDateTime { get; }
+
+        public global::System.Int32 UserId { get; }
 
         public global::System.Int32 Id { get; }
 
@@ -101,7 +459,7 @@ namespace Forum3Server
                 return false;
             }
 
-            return (Id == other.Id);
+            return (Title.Equals(other.Title)) && Content.Equals(other.Content) && CreatedDateTime.Equals(other.CreatedDateTime) && UserId == other.UserId && Id == other.Id;
         }
 
         public override global::System.Boolean Equals(global::System.Object? obj)
@@ -129,6 +487,10 @@ namespace Forum3Server
             unchecked
             {
                 int hash = 5;
+                hash ^= 397 * Title.GetHashCode();
+                hash ^= 397 * Content.GetHashCode();
+                hash ^= 397 * CreatedDateTime.GetHashCode();
+                hash ^= 397 * UserId.GetHashCode();
                 hash ^= 397 * Id.GetHashCode();
                 return hash;
             }
@@ -144,6 +506,14 @@ namespace Forum3Server
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
     public partial interface IGetAllPosts_AllPosts
     {
+        public global::System.String Title { get; }
+
+        public global::System.String Content { get; }
+
+        public global::System.DateTimeOffset CreatedDateTime { get; }
+
+        public global::System.Int32 UserId { get; }
+
         public global::System.Int32 Id { get; }
     }
 
@@ -153,11 +523,249 @@ namespace Forum3Server
     }
 
     /// <summary>
+    /// Represents the operation service of the GetAllComments GraphQL operation
+    /// <code>
+    /// query GetAllComments {
+    ///   allComments {
+    ///     __typename
+    ///     message
+    ///     createdDateTime
+    ///     userId
+    ///     postId
+    ///     id
+    ///     ... on Comment {
+    ///       id
+    ///     }
+    ///   }
+    /// }
+    /// </code>
+    /// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
+    public partial class GetAllCommentsQueryDocument : global::StrawberryShake.IDocument
+    {
+        private GetAllCommentsQueryDocument()
+        {
+        }
+
+        public static GetAllCommentsQueryDocument Instance { get; } = new GetAllCommentsQueryDocument();
+        public global::StrawberryShake.OperationKind Kind => global::StrawberryShake.OperationKind.Query;
+        public global::System.ReadOnlySpan<global::System.Byte> Body => new global::System.Byte[]{0x71, 0x75, 0x65, 0x72, 0x79, 0x20, 0x47, 0x65, 0x74, 0x41, 0x6c, 0x6c, 0x43, 0x6f, 0x6d, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x20, 0x7b, 0x20, 0x61, 0x6c, 0x6c, 0x43, 0x6f, 0x6d, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x20, 0x7b, 0x20, 0x5f, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x20, 0x63, 0x72, 0x65, 0x61, 0x74, 0x65, 0x64, 0x44, 0x61, 0x74, 0x65, 0x54, 0x69, 0x6d, 0x65, 0x20, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x20, 0x70, 0x6f, 0x73, 0x74, 0x49, 0x64, 0x20, 0x69, 0x64, 0x20, 0x2e, 0x2e, 0x2e, 0x20, 0x6f, 0x6e, 0x20, 0x43, 0x6f, 0x6d, 0x6d, 0x65, 0x6e, 0x74, 0x20, 0x7b, 0x20, 0x69, 0x64, 0x20, 0x7d, 0x20, 0x7d, 0x20, 0x7d};
+        public global::StrawberryShake.DocumentHash Hash { get; } = new global::StrawberryShake.DocumentHash("md5Hash", "c71dcf0aa36ba5f3fba4f6f9bd981dff");
+        public override global::System.String ToString()
+        {
+#if NETSTANDARD2_0
+        return global::System.Text.Encoding.UTF8.GetString(Body.ToArray());
+#else
+            return global::System.Text.Encoding.UTF8.GetString(Body);
+#endif
+        }
+    }
+
+    /// <summary>
+    /// Represents the operation service of the GetAllComments GraphQL operation
+    /// <code>
+    /// query GetAllComments {
+    ///   allComments {
+    ///     __typename
+    ///     message
+    ///     createdDateTime
+    ///     userId
+    ///     postId
+    ///     id
+    ///     ... on Comment {
+    ///       id
+    ///     }
+    ///   }
+    /// }
+    /// </code>
+    /// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
+    public partial class GetAllCommentsQuery : global::Forum3Server.IGetAllCommentsQuery
+    {
+        private readonly global::StrawberryShake.IOperationExecutor<IGetAllCommentsResult> _operationExecutor;
+        public GetAllCommentsQuery(global::StrawberryShake.IOperationExecutor<IGetAllCommentsResult> operationExecutor)
+        {
+            _operationExecutor = operationExecutor ?? throw new global::System.ArgumentNullException(nameof(operationExecutor));
+        }
+
+        global::System.Type global::StrawberryShake.IOperationRequestFactory.ResultType => typeof(IGetAllCommentsResult);
+        public async global::System.Threading.Tasks.Task<global::StrawberryShake.IOperationResult<IGetAllCommentsResult>> ExecuteAsync(global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            var request = CreateRequest();
+            return await _operationExecutor.ExecuteAsync(request, cancellationToken).ConfigureAwait(false);
+        }
+
+        public global::System.IObservable<global::StrawberryShake.IOperationResult<IGetAllCommentsResult>> Watch(global::StrawberryShake.ExecutionStrategy? strategy = null)
+        {
+            var request = CreateRequest();
+            return _operationExecutor.Watch(request, strategy);
+        }
+
+        private global::StrawberryShake.OperationRequest CreateRequest()
+        {
+            return CreateRequest(null);
+        }
+
+        private global::StrawberryShake.OperationRequest CreateRequest(global::System.Collections.Generic.IReadOnlyDictionary<global::System.String, global::System.Object?>? variables)
+        {
+            return new global::StrawberryShake.OperationRequest(id: GetAllCommentsQueryDocument.Instance.Hash.Value, name: "GetAllComments", document: GetAllCommentsQueryDocument.Instance, strategy: global::StrawberryShake.RequestStrategy.Default);
+        }
+
+        global::StrawberryShake.OperationRequest global::StrawberryShake.IOperationRequestFactory.Create(global::System.Collections.Generic.IReadOnlyDictionary<global::System.String, global::System.Object?>? variables)
+        {
+            return CreateRequest();
+        }
+    }
+
+    /// <summary>
+    /// Represents the operation service of the GetAllComments GraphQL operation
+    /// <code>
+    /// query GetAllComments {
+    ///   allComments {
+    ///     __typename
+    ///     message
+    ///     createdDateTime
+    ///     userId
+    ///     postId
+    ///     id
+    ///     ... on Comment {
+    ///       id
+    ///     }
+    ///   }
+    /// }
+    /// </code>
+    /// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
+    public partial interface IGetAllCommentsQuery : global::StrawberryShake.IOperationRequestFactory
+    {
+        global::System.Threading.Tasks.Task<global::StrawberryShake.IOperationResult<IGetAllCommentsResult>> ExecuteAsync(global::System.Threading.CancellationToken cancellationToken = default);
+        global::System.IObservable<global::StrawberryShake.IOperationResult<IGetAllCommentsResult>> Watch(global::StrawberryShake.ExecutionStrategy? strategy = null);
+    }
+
+    /// <summary>
+    /// Represents the operation service of the GetAllUsers GraphQL operation
+    /// <code>
+    /// query GetAllUsers {
+    ///   allUsers {
+    ///     __typename
+    ///     firstName
+    ///     lastName
+    ///     id
+    ///     ... on User {
+    ///       id
+    ///     }
+    ///   }
+    /// }
+    /// </code>
+    /// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
+    public partial class GetAllUsersQueryDocument : global::StrawberryShake.IDocument
+    {
+        private GetAllUsersQueryDocument()
+        {
+        }
+
+        public static GetAllUsersQueryDocument Instance { get; } = new GetAllUsersQueryDocument();
+        public global::StrawberryShake.OperationKind Kind => global::StrawberryShake.OperationKind.Query;
+        public global::System.ReadOnlySpan<global::System.Byte> Body => new global::System.Byte[]{0x71, 0x75, 0x65, 0x72, 0x79, 0x20, 0x47, 0x65, 0x74, 0x41, 0x6c, 0x6c, 0x55, 0x73, 0x65, 0x72, 0x73, 0x20, 0x7b, 0x20, 0x61, 0x6c, 0x6c, 0x55, 0x73, 0x65, 0x72, 0x73, 0x20, 0x7b, 0x20, 0x5f, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x66, 0x69, 0x72, 0x73, 0x74, 0x4e, 0x61, 0x6d, 0x65, 0x20, 0x6c, 0x61, 0x73, 0x74, 0x4e, 0x61, 0x6d, 0x65, 0x20, 0x69, 0x64, 0x20, 0x2e, 0x2e, 0x2e, 0x20, 0x6f, 0x6e, 0x20, 0x55, 0x73, 0x65, 0x72, 0x20, 0x7b, 0x20, 0x69, 0x64, 0x20, 0x7d, 0x20, 0x7d, 0x20, 0x7d};
+        public global::StrawberryShake.DocumentHash Hash { get; } = new global::StrawberryShake.DocumentHash("md5Hash", "ef96b72841199c953f61ca3f23142677");
+        public override global::System.String ToString()
+        {
+#if NETSTANDARD2_0
+        return global::System.Text.Encoding.UTF8.GetString(Body.ToArray());
+#else
+            return global::System.Text.Encoding.UTF8.GetString(Body);
+#endif
+        }
+    }
+
+    /// <summary>
+    /// Represents the operation service of the GetAllUsers GraphQL operation
+    /// <code>
+    /// query GetAllUsers {
+    ///   allUsers {
+    ///     __typename
+    ///     firstName
+    ///     lastName
+    ///     id
+    ///     ... on User {
+    ///       id
+    ///     }
+    ///   }
+    /// }
+    /// </code>
+    /// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
+    public partial class GetAllUsersQuery : global::Forum3Server.IGetAllUsersQuery
+    {
+        private readonly global::StrawberryShake.IOperationExecutor<IGetAllUsersResult> _operationExecutor;
+        public GetAllUsersQuery(global::StrawberryShake.IOperationExecutor<IGetAllUsersResult> operationExecutor)
+        {
+            _operationExecutor = operationExecutor ?? throw new global::System.ArgumentNullException(nameof(operationExecutor));
+        }
+
+        global::System.Type global::StrawberryShake.IOperationRequestFactory.ResultType => typeof(IGetAllUsersResult);
+        public async global::System.Threading.Tasks.Task<global::StrawberryShake.IOperationResult<IGetAllUsersResult>> ExecuteAsync(global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            var request = CreateRequest();
+            return await _operationExecutor.ExecuteAsync(request, cancellationToken).ConfigureAwait(false);
+        }
+
+        public global::System.IObservable<global::StrawberryShake.IOperationResult<IGetAllUsersResult>> Watch(global::StrawberryShake.ExecutionStrategy? strategy = null)
+        {
+            var request = CreateRequest();
+            return _operationExecutor.Watch(request, strategy);
+        }
+
+        private global::StrawberryShake.OperationRequest CreateRequest()
+        {
+            return CreateRequest(null);
+        }
+
+        private global::StrawberryShake.OperationRequest CreateRequest(global::System.Collections.Generic.IReadOnlyDictionary<global::System.String, global::System.Object?>? variables)
+        {
+            return new global::StrawberryShake.OperationRequest(id: GetAllUsersQueryDocument.Instance.Hash.Value, name: "GetAllUsers", document: GetAllUsersQueryDocument.Instance, strategy: global::StrawberryShake.RequestStrategy.Default);
+        }
+
+        global::StrawberryShake.OperationRequest global::StrawberryShake.IOperationRequestFactory.Create(global::System.Collections.Generic.IReadOnlyDictionary<global::System.String, global::System.Object?>? variables)
+        {
+            return CreateRequest();
+        }
+    }
+
+    /// <summary>
+    /// Represents the operation service of the GetAllUsers GraphQL operation
+    /// <code>
+    /// query GetAllUsers {
+    ///   allUsers {
+    ///     __typename
+    ///     firstName
+    ///     lastName
+    ///     id
+    ///     ... on User {
+    ///       id
+    ///     }
+    ///   }
+    /// }
+    /// </code>
+    /// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
+    public partial interface IGetAllUsersQuery : global::StrawberryShake.IOperationRequestFactory
+    {
+        global::System.Threading.Tasks.Task<global::StrawberryShake.IOperationResult<IGetAllUsersResult>> ExecuteAsync(global::System.Threading.CancellationToken cancellationToken = default);
+        global::System.IObservable<global::StrawberryShake.IOperationResult<IGetAllUsersResult>> Watch(global::StrawberryShake.ExecutionStrategy? strategy = null);
+    }
+
+    /// <summary>
     /// Represents the operation service of the GetAllPosts GraphQL operation
     /// <code>
     /// query GetAllPosts {
     ///   allPosts {
     ///     __typename
+    ///     title
+    ///     content
+    ///     createdDateTime
+    ///     userId
     ///     id
     ///     ... on Post {
     ///       id
@@ -175,8 +783,8 @@ namespace Forum3Server
 
         public static GetAllPostsQueryDocument Instance { get; } = new GetAllPostsQueryDocument();
         public global::StrawberryShake.OperationKind Kind => global::StrawberryShake.OperationKind.Query;
-        public global::System.ReadOnlySpan<global::System.Byte> Body => new global::System.Byte[]{0x71, 0x75, 0x65, 0x72, 0x79, 0x20, 0x47, 0x65, 0x74, 0x41, 0x6c, 0x6c, 0x50, 0x6f, 0x73, 0x74, 0x73, 0x20, 0x7b, 0x20, 0x61, 0x6c, 0x6c, 0x50, 0x6f, 0x73, 0x74, 0x73, 0x20, 0x7b, 0x20, 0x5f, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x69, 0x64, 0x20, 0x2e, 0x2e, 0x2e, 0x20, 0x6f, 0x6e, 0x20, 0x50, 0x6f, 0x73, 0x74, 0x20, 0x7b, 0x20, 0x69, 0x64, 0x20, 0x7d, 0x20, 0x7d, 0x20, 0x7d};
-        public global::StrawberryShake.DocumentHash Hash { get; } = new global::StrawberryShake.DocumentHash("md5Hash", "7b61a355b40d9ba698aab5f9df847ce4");
+        public global::System.ReadOnlySpan<global::System.Byte> Body => new global::System.Byte[]{0x71, 0x75, 0x65, 0x72, 0x79, 0x20, 0x47, 0x65, 0x74, 0x41, 0x6c, 0x6c, 0x50, 0x6f, 0x73, 0x74, 0x73, 0x20, 0x7b, 0x20, 0x61, 0x6c, 0x6c, 0x50, 0x6f, 0x73, 0x74, 0x73, 0x20, 0x7b, 0x20, 0x5f, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x74, 0x69, 0x74, 0x6c, 0x65, 0x20, 0x63, 0x6f, 0x6e, 0x74, 0x65, 0x6e, 0x74, 0x20, 0x63, 0x72, 0x65, 0x61, 0x74, 0x65, 0x64, 0x44, 0x61, 0x74, 0x65, 0x54, 0x69, 0x6d, 0x65, 0x20, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x20, 0x69, 0x64, 0x20, 0x2e, 0x2e, 0x2e, 0x20, 0x6f, 0x6e, 0x20, 0x50, 0x6f, 0x73, 0x74, 0x20, 0x7b, 0x20, 0x69, 0x64, 0x20, 0x7d, 0x20, 0x7d, 0x20, 0x7d};
+        public global::StrawberryShake.DocumentHash Hash { get; } = new global::StrawberryShake.DocumentHash("md5Hash", "404a2abd2b00b13f625c2aebf6e722c6");
         public override global::System.String ToString()
         {
 #if NETSTANDARD2_0
@@ -193,6 +801,10 @@ namespace Forum3Server
     /// query GetAllPosts {
     ///   allPosts {
     ///     __typename
+    ///     title
+    ///     content
+    ///     createdDateTime
+    ///     userId
     ///     id
     ///     ... on Post {
     ///       id
@@ -245,6 +857,10 @@ namespace Forum3Server
     /// query GetAllPosts {
     ///   allPosts {
     ///     __typename
+    ///     title
+    ///     content
+    ///     createdDateTime
+    ///     userId
     ///     id
     ///     ... on Post {
     ///       id
@@ -266,13 +882,19 @@ namespace Forum3Server
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
     public partial class Forum3Client : global::Forum3Server.IForum3Client
     {
+        private readonly global::Forum3Server.IGetAllCommentsQuery _getAllComments;
+        private readonly global::Forum3Server.IGetAllUsersQuery _getAllUsers;
         private readonly global::Forum3Server.IGetAllPostsQuery _getAllPosts;
-        public Forum3Client(global::Forum3Server.IGetAllPostsQuery getAllPosts)
+        public Forum3Client(global::Forum3Server.IGetAllCommentsQuery getAllComments, global::Forum3Server.IGetAllUsersQuery getAllUsers, global::Forum3Server.IGetAllPostsQuery getAllPosts)
         {
+            _getAllComments = getAllComments ?? throw new global::System.ArgumentNullException(nameof(getAllComments));
+            _getAllUsers = getAllUsers ?? throw new global::System.ArgumentNullException(nameof(getAllUsers));
             _getAllPosts = getAllPosts ?? throw new global::System.ArgumentNullException(nameof(getAllPosts));
         }
 
         public static global::System.String ClientName => "Forum3Client";
+        public global::Forum3Server.IGetAllCommentsQuery GetAllComments => _getAllComments;
+        public global::Forum3Server.IGetAllUsersQuery GetAllUsers => _getAllUsers;
         public global::Forum3Server.IGetAllPostsQuery GetAllPosts => _getAllPosts;
     }
 
@@ -282,6 +904,10 @@ namespace Forum3Server
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
     public partial interface IForum3Client
     {
+        global::Forum3Server.IGetAllCommentsQuery GetAllComments { get; }
+
+        global::Forum3Server.IGetAllUsersQuery GetAllUsers { get; }
+
         global::Forum3Server.IGetAllPostsQuery GetAllPosts { get; }
     }
 }
@@ -289,14 +915,278 @@ namespace Forum3Server
 namespace Forum3Server.State
 {
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
-    public partial class PostEntity
+    public partial class CommentEntity
     {
-        public PostEntity(global::System.Int32 id = default !)
+        public CommentEntity(global::System.String? message = default !, global::System.DateTimeOffset createdDateTime = default !, global::System.Int32 userId = default !, global::System.Int32 postId = default !, global::System.Int32 id = default !)
         {
+            Message = message;
+            CreatedDateTime = createdDateTime;
+            UserId = userId;
+            PostId = postId;
             Id = id;
         }
 
+        public global::System.String? Message { get; }
+
+        public global::System.DateTimeOffset CreatedDateTime { get; }
+
+        public global::System.Int32 UserId { get; }
+
+        public global::System.Int32 PostId { get; }
+
         public global::System.Int32 Id { get; }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
+    public partial class UserEntity
+    {
+        public UserEntity(global::System.String? firstName = default !, global::System.String? lastName = default !, global::System.Int32 id = default !)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            Id = id;
+        }
+
+        public global::System.String? FirstName { get; }
+
+        public global::System.String? LastName { get; }
+
+        public global::System.Int32 Id { get; }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
+    public partial class PostEntity
+    {
+        public PostEntity(global::System.String title = default !, global::System.String content = default !, global::System.DateTimeOffset createdDateTime = default !, global::System.Int32 userId = default !, global::System.Int32 id = default !)
+        {
+            Title = title;
+            Content = content;
+            CreatedDateTime = createdDateTime;
+            UserId = userId;
+            Id = id;
+        }
+
+        public global::System.String Title { get; }
+
+        public global::System.String Content { get; }
+
+        public global::System.DateTimeOffset CreatedDateTime { get; }
+
+        public global::System.Int32 UserId { get; }
+
+        public global::System.Int32 Id { get; }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
+    public partial class GetAllCommentsResultFactory : global::StrawberryShake.IOperationResultDataFactory<global::Forum3Server.GetAllCommentsResult>
+    {
+        private readonly global::StrawberryShake.IEntityStore _entityStore;
+        private readonly global::StrawberryShake.IEntityMapper<global::Forum3Server.State.CommentEntity, GetAllComments_AllComments_Comment> _getAllComments_AllComments_CommentFromCommentEntityMapper;
+        public GetAllCommentsResultFactory(global::StrawberryShake.IEntityStore entityStore, global::StrawberryShake.IEntityMapper<global::Forum3Server.State.CommentEntity, GetAllComments_AllComments_Comment> getAllComments_AllComments_CommentFromCommentEntityMapper)
+        {
+            _entityStore = entityStore ?? throw new global::System.ArgumentNullException(nameof(entityStore));
+            _getAllComments_AllComments_CommentFromCommentEntityMapper = getAllComments_AllComments_CommentFromCommentEntityMapper ?? throw new global::System.ArgumentNullException(nameof(getAllComments_AllComments_CommentFromCommentEntityMapper));
+        }
+
+        global::System.Type global::StrawberryShake.IOperationResultDataFactory.ResultType => typeof(global::Forum3Server.IGetAllCommentsResult);
+        public GetAllCommentsResult Create(global::StrawberryShake.IOperationResultDataInfo dataInfo, global::StrawberryShake.IEntityStoreSnapshot? snapshot = null)
+        {
+            if (snapshot is null)
+            {
+                snapshot = _entityStore.CurrentSnapshot;
+            }
+
+            if (dataInfo is GetAllCommentsResultInfo info)
+            {
+                return new GetAllCommentsResult(MapIGetAllComments_AllCommentsArray(info.AllComments, snapshot));
+            }
+
+            throw new global::System.ArgumentException("GetAllCommentsResultInfo expected.");
+        }
+
+        private global::System.Collections.Generic.IReadOnlyList<global::Forum3Server.IGetAllComments_AllComments?>? MapIGetAllComments_AllCommentsArray(global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.EntityId?>? list, global::StrawberryShake.IEntityStoreSnapshot snapshot)
+        {
+            if (list is null)
+            {
+                return null;
+            }
+
+            var comments = new global::System.Collections.Generic.List<global::Forum3Server.IGetAllComments_AllComments?>();
+            foreach (global::StrawberryShake.EntityId? child in list)
+            {
+                comments.Add(MapIGetAllComments_AllComments(child, snapshot));
+            }
+
+            return comments;
+        }
+
+        private global::Forum3Server.IGetAllComments_AllComments? MapIGetAllComments_AllComments(global::StrawberryShake.EntityId? entityId, global::StrawberryShake.IEntityStoreSnapshot snapshot)
+        {
+            if (entityId is null)
+            {
+                return null;
+            }
+
+            if (entityId.Value.Name.Equals("Comment", global::System.StringComparison.Ordinal))
+            {
+                return _getAllComments_AllComments_CommentFromCommentEntityMapper.Map(snapshot.GetEntity<global::Forum3Server.State.CommentEntity>(entityId.Value) ?? throw new global::StrawberryShake.GraphQLClientException());
+            }
+
+            throw new global::System.NotSupportedException();
+        }
+
+        global::System.Object global::StrawberryShake.IOperationResultDataFactory.Create(global::StrawberryShake.IOperationResultDataInfo dataInfo, global::StrawberryShake.IEntityStoreSnapshot? snapshot)
+        {
+            return Create(dataInfo, snapshot);
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
+    public partial class GetAllCommentsResultInfo : global::StrawberryShake.IOperationResultDataInfo
+    {
+        private readonly global::System.Collections.Generic.IReadOnlyCollection<global::StrawberryShake.EntityId> _entityIds;
+        private readonly global::System.UInt64 _version;
+        public GetAllCommentsResultInfo(global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.EntityId?>? allComments, global::System.Collections.Generic.IReadOnlyCollection<global::StrawberryShake.EntityId> entityIds, global::System.UInt64 version)
+        {
+            AllComments = allComments;
+            _entityIds = entityIds ?? throw new global::System.ArgumentNullException(nameof(entityIds));
+            _version = version;
+        }
+
+        public global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.EntityId?>? AllComments { get; }
+
+        public global::System.Collections.Generic.IReadOnlyCollection<global::StrawberryShake.EntityId> EntityIds => _entityIds;
+        public global::System.UInt64 Version => _version;
+        public global::StrawberryShake.IOperationResultDataInfo WithVersion(global::System.UInt64 version)
+        {
+            return new GetAllCommentsResultInfo(AllComments, _entityIds, version);
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
+    public partial class GetAllComments_AllComments_CommentFromCommentEntityMapper : global::StrawberryShake.IEntityMapper<global::Forum3Server.State.CommentEntity, GetAllComments_AllComments_Comment>
+    {
+        private readonly global::StrawberryShake.IEntityStore _entityStore;
+        public GetAllComments_AllComments_CommentFromCommentEntityMapper(global::StrawberryShake.IEntityStore entityStore)
+        {
+            _entityStore = entityStore ?? throw new global::System.ArgumentNullException(nameof(entityStore));
+        }
+
+        public GetAllComments_AllComments_Comment Map(global::Forum3Server.State.CommentEntity entity, global::StrawberryShake.IEntityStoreSnapshot? snapshot = null)
+        {
+            if (snapshot is null)
+            {
+                snapshot = _entityStore.CurrentSnapshot;
+            }
+
+            return new GetAllComments_AllComments_Comment(entity.Message, entity.CreatedDateTime, entity.UserId, entity.PostId, entity.Id);
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
+    public partial class GetAllUsersResultFactory : global::StrawberryShake.IOperationResultDataFactory<global::Forum3Server.GetAllUsersResult>
+    {
+        private readonly global::StrawberryShake.IEntityStore _entityStore;
+        private readonly global::StrawberryShake.IEntityMapper<global::Forum3Server.State.UserEntity, GetAllUsers_AllUsers_User> _getAllUsers_AllUsers_UserFromUserEntityMapper;
+        public GetAllUsersResultFactory(global::StrawberryShake.IEntityStore entityStore, global::StrawberryShake.IEntityMapper<global::Forum3Server.State.UserEntity, GetAllUsers_AllUsers_User> getAllUsers_AllUsers_UserFromUserEntityMapper)
+        {
+            _entityStore = entityStore ?? throw new global::System.ArgumentNullException(nameof(entityStore));
+            _getAllUsers_AllUsers_UserFromUserEntityMapper = getAllUsers_AllUsers_UserFromUserEntityMapper ?? throw new global::System.ArgumentNullException(nameof(getAllUsers_AllUsers_UserFromUserEntityMapper));
+        }
+
+        global::System.Type global::StrawberryShake.IOperationResultDataFactory.ResultType => typeof(global::Forum3Server.IGetAllUsersResult);
+        public GetAllUsersResult Create(global::StrawberryShake.IOperationResultDataInfo dataInfo, global::StrawberryShake.IEntityStoreSnapshot? snapshot = null)
+        {
+            if (snapshot is null)
+            {
+                snapshot = _entityStore.CurrentSnapshot;
+            }
+
+            if (dataInfo is GetAllUsersResultInfo info)
+            {
+                return new GetAllUsersResult(MapIGetAllUsers_AllUsersArray(info.AllUsers, snapshot));
+            }
+
+            throw new global::System.ArgumentException("GetAllUsersResultInfo expected.");
+        }
+
+        private global::System.Collections.Generic.IReadOnlyList<global::Forum3Server.IGetAllUsers_AllUsers?>? MapIGetAllUsers_AllUsersArray(global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.EntityId?>? list, global::StrawberryShake.IEntityStoreSnapshot snapshot)
+        {
+            if (list is null)
+            {
+                return null;
+            }
+
+            var users = new global::System.Collections.Generic.List<global::Forum3Server.IGetAllUsers_AllUsers?>();
+            foreach (global::StrawberryShake.EntityId? child in list)
+            {
+                users.Add(MapIGetAllUsers_AllUsers(child, snapshot));
+            }
+
+            return users;
+        }
+
+        private global::Forum3Server.IGetAllUsers_AllUsers? MapIGetAllUsers_AllUsers(global::StrawberryShake.EntityId? entityId, global::StrawberryShake.IEntityStoreSnapshot snapshot)
+        {
+            if (entityId is null)
+            {
+                return null;
+            }
+
+            if (entityId.Value.Name.Equals("User", global::System.StringComparison.Ordinal))
+            {
+                return _getAllUsers_AllUsers_UserFromUserEntityMapper.Map(snapshot.GetEntity<global::Forum3Server.State.UserEntity>(entityId.Value) ?? throw new global::StrawberryShake.GraphQLClientException());
+            }
+
+            throw new global::System.NotSupportedException();
+        }
+
+        global::System.Object global::StrawberryShake.IOperationResultDataFactory.Create(global::StrawberryShake.IOperationResultDataInfo dataInfo, global::StrawberryShake.IEntityStoreSnapshot? snapshot)
+        {
+            return Create(dataInfo, snapshot);
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
+    public partial class GetAllUsersResultInfo : global::StrawberryShake.IOperationResultDataInfo
+    {
+        private readonly global::System.Collections.Generic.IReadOnlyCollection<global::StrawberryShake.EntityId> _entityIds;
+        private readonly global::System.UInt64 _version;
+        public GetAllUsersResultInfo(global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.EntityId?>? allUsers, global::System.Collections.Generic.IReadOnlyCollection<global::StrawberryShake.EntityId> entityIds, global::System.UInt64 version)
+        {
+            AllUsers = allUsers;
+            _entityIds = entityIds ?? throw new global::System.ArgumentNullException(nameof(entityIds));
+            _version = version;
+        }
+
+        public global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.EntityId?>? AllUsers { get; }
+
+        public global::System.Collections.Generic.IReadOnlyCollection<global::StrawberryShake.EntityId> EntityIds => _entityIds;
+        public global::System.UInt64 Version => _version;
+        public global::StrawberryShake.IOperationResultDataInfo WithVersion(global::System.UInt64 version)
+        {
+            return new GetAllUsersResultInfo(AllUsers, _entityIds, version);
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
+    public partial class GetAllUsers_AllUsers_UserFromUserEntityMapper : global::StrawberryShake.IEntityMapper<global::Forum3Server.State.UserEntity, GetAllUsers_AllUsers_User>
+    {
+        private readonly global::StrawberryShake.IEntityStore _entityStore;
+        public GetAllUsers_AllUsers_UserFromUserEntityMapper(global::StrawberryShake.IEntityStore entityStore)
+        {
+            _entityStore = entityStore ?? throw new global::System.ArgumentNullException(nameof(entityStore));
+        }
+
+        public GetAllUsers_AllUsers_User Map(global::Forum3Server.State.UserEntity entity, global::StrawberryShake.IEntityStoreSnapshot? snapshot = null)
+        {
+            if (snapshot is null)
+            {
+                snapshot = _entityStore.CurrentSnapshot;
+            }
+
+            return new GetAllUsers_AllUsers_User(entity.FirstName, entity.LastName, entity.Id);
+        }
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
@@ -401,7 +1291,289 @@ namespace Forum3Server.State
                 snapshot = _entityStore.CurrentSnapshot;
             }
 
-            return new GetAllPosts_AllPosts_Post(entity.Id);
+            return new GetAllPosts_AllPosts_Post(entity.Title, entity.Content, entity.CreatedDateTime, entity.UserId, entity.Id);
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
+    public partial class GetAllCommentsBuilder : global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::Forum3Server.IGetAllCommentsResult>
+    {
+        private readonly global::StrawberryShake.IEntityStore _entityStore;
+        private readonly global::StrawberryShake.IEntityIdSerializer _idSerializer;
+        private readonly global::StrawberryShake.IOperationResultDataFactory<global::Forum3Server.IGetAllCommentsResult> _resultDataFactory;
+        private readonly global::StrawberryShake.Serialization.ILeafValueParser<global::System.String, global::System.String> _stringParser;
+        private readonly global::StrawberryShake.Serialization.ILeafValueParser<global::System.String, global::System.DateTimeOffset> _dateTimeParser;
+        private readonly global::StrawberryShake.Serialization.ILeafValueParser<global::System.Int32, global::System.Int32> _intParser;
+        public GetAllCommentsBuilder(global::StrawberryShake.IEntityStore entityStore, global::StrawberryShake.IEntityIdSerializer idSerializer, global::StrawberryShake.IOperationResultDataFactory<global::Forum3Server.IGetAllCommentsResult> resultDataFactory, global::StrawberryShake.Serialization.ISerializerResolver serializerResolver)
+        {
+            _entityStore = entityStore ?? throw new global::System.ArgumentNullException(nameof(entityStore));
+            _idSerializer = idSerializer ?? throw new global::System.ArgumentNullException(nameof(idSerializer));
+            _resultDataFactory = resultDataFactory ?? throw new global::System.ArgumentNullException(nameof(resultDataFactory));
+            _stringParser = serializerResolver.GetLeafValueParser<global::System.String, global::System.String>("String") ?? throw new global::System.ArgumentException("No serializer for type `String` found.");
+            _dateTimeParser = serializerResolver.GetLeafValueParser<global::System.String, global::System.DateTimeOffset>("DateTime") ?? throw new global::System.ArgumentException("No serializer for type `DateTime` found.");
+            _intParser = serializerResolver.GetLeafValueParser<global::System.Int32, global::System.Int32>("Int") ?? throw new global::System.ArgumentException("No serializer for type `Int` found.");
+        }
+
+        public global::StrawberryShake.IOperationResult<IGetAllCommentsResult> Build(global::StrawberryShake.Response<global::System.Text.Json.JsonDocument> response)
+        {
+            (IGetAllCommentsResult Result, GetAllCommentsResultInfo Info)? data = null;
+            global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.IClientError>? errors = null;
+            if (response.Exception is null)
+            {
+                try
+                {
+                    if (response.Body != null)
+                    {
+                        if (response.Body.RootElement.TryGetProperty("data", out global::System.Text.Json.JsonElement dataElement) && dataElement.ValueKind == global::System.Text.Json.JsonValueKind.Object)
+                        {
+                            data = BuildData(dataElement);
+                        }
+
+                        if (response.Body.RootElement.TryGetProperty("errors", out global::System.Text.Json.JsonElement errorsElement))
+                        {
+                            errors = global::StrawberryShake.Json.JsonErrorParser.ParseErrors(errorsElement);
+                        }
+                    }
+                }
+                catch (global::System.Exception ex)
+                {
+                    errors = new global::StrawberryShake.IClientError[]{new global::StrawberryShake.ClientError(ex.Message, exception: ex, extensions: new global::System.Collections.Generic.Dictionary<global::System.String, global::System.Object?>{{"body", response.Body?.RootElement.ToString()}})};
+                }
+            }
+            else
+            {
+                if (response.Body != null && response.Body.RootElement.TryGetProperty("errors", out global::System.Text.Json.JsonElement errorsElement))
+                {
+                    errors = global::StrawberryShake.Json.JsonErrorParser.ParseErrors(errorsElement);
+                }
+                else
+                {
+                    errors = new global::StrawberryShake.IClientError[]{new global::StrawberryShake.ClientError(response.Exception.Message, exception: response.Exception, extensions: new global::System.Collections.Generic.Dictionary<global::System.String, global::System.Object?>{{"body", response.Body?.RootElement.ToString()}})};
+                }
+            }
+
+            return new global::StrawberryShake.OperationResult<IGetAllCommentsResult>(data?.Result, data?.Info, _resultDataFactory, errors);
+        }
+
+        private (IGetAllCommentsResult, GetAllCommentsResultInfo) BuildData(global::System.Text.Json.JsonElement obj)
+        {
+            var entityIds = new global::System.Collections.Generic.HashSet<global::StrawberryShake.EntityId>();
+            global::StrawberryShake.IEntityStoreSnapshot snapshot = default !;
+            global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.EntityId?>? allCommentsId = default !;
+            _entityStore.Update(session =>
+            {
+                allCommentsId = UpdateIGetAllComments_AllCommentsEntityArray(session, global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "allComments"), entityIds);
+                snapshot = session.CurrentSnapshot;
+            });
+            var resultInfo = new GetAllCommentsResultInfo(allCommentsId, entityIds, snapshot.Version);
+            return (_resultDataFactory.Create(resultInfo), resultInfo);
+        }
+
+        private global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.EntityId?>? UpdateIGetAllComments_AllCommentsEntityArray(global::StrawberryShake.IEntityStoreUpdateSession session, global::System.Text.Json.JsonElement? obj, global::System.Collections.Generic.ISet<global::StrawberryShake.EntityId> entityIds)
+        {
+            if (!obj.HasValue)
+            {
+                return null;
+            }
+
+            var comments = new global::System.Collections.Generic.List<global::StrawberryShake.EntityId?>();
+            foreach (global::System.Text.Json.JsonElement child in obj.Value.EnumerateArray())
+            {
+                comments.Add(UpdateIGetAllComments_AllCommentsEntity(session, child, entityIds));
+            }
+
+            return comments;
+        }
+
+        private global::StrawberryShake.EntityId? UpdateIGetAllComments_AllCommentsEntity(global::StrawberryShake.IEntityStoreUpdateSession session, global::System.Text.Json.JsonElement? obj, global::System.Collections.Generic.ISet<global::StrawberryShake.EntityId> entityIds)
+        {
+            if (!obj.HasValue)
+            {
+                return null;
+            }
+
+            global::StrawberryShake.EntityId entityId = _idSerializer.Parse(obj.Value);
+            entityIds.Add(entityId);
+            if (entityId.Name.Equals("Comment", global::System.StringComparison.Ordinal))
+            {
+                if (session.CurrentSnapshot.TryGetEntity(entityId, out global::Forum3Server.State.CommentEntity? entity))
+                {
+                    session.SetEntity(entityId, new global::Forum3Server.State.CommentEntity(DeserializeString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "message")), DeserializeNonNullableDateTimeOffset(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "createdDateTime")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "userId")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "postId")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "id"))));
+                }
+                else
+                {
+                    session.SetEntity(entityId, new global::Forum3Server.State.CommentEntity(DeserializeString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "message")), DeserializeNonNullableDateTimeOffset(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "createdDateTime")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "userId")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "postId")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "id"))));
+                }
+
+                return entityId;
+            }
+
+            throw new global::System.NotSupportedException();
+        }
+
+        private global::System.String? DeserializeString(global::System.Text.Json.JsonElement? obj)
+        {
+            if (!obj.HasValue)
+            {
+                return null;
+            }
+
+            return _stringParser.Parse(obj.Value.GetString()!);
+        }
+
+        private global::System.DateTimeOffset DeserializeNonNullableDateTimeOffset(global::System.Text.Json.JsonElement? obj)
+        {
+            if (!obj.HasValue)
+            {
+                throw new global::System.ArgumentNullException();
+            }
+
+            return _dateTimeParser.Parse(obj.Value.GetString()!);
+        }
+
+        private global::System.Int32 DeserializeNonNullableInt32(global::System.Text.Json.JsonElement? obj)
+        {
+            if (!obj.HasValue)
+            {
+                throw new global::System.ArgumentNullException();
+            }
+
+            return _intParser.Parse(obj.Value.GetInt32()!);
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
+    public partial class GetAllUsersBuilder : global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::Forum3Server.IGetAllUsersResult>
+    {
+        private readonly global::StrawberryShake.IEntityStore _entityStore;
+        private readonly global::StrawberryShake.IEntityIdSerializer _idSerializer;
+        private readonly global::StrawberryShake.IOperationResultDataFactory<global::Forum3Server.IGetAllUsersResult> _resultDataFactory;
+        private readonly global::StrawberryShake.Serialization.ILeafValueParser<global::System.String, global::System.String> _stringParser;
+        private readonly global::StrawberryShake.Serialization.ILeafValueParser<global::System.Int32, global::System.Int32> _intParser;
+        public GetAllUsersBuilder(global::StrawberryShake.IEntityStore entityStore, global::StrawberryShake.IEntityIdSerializer idSerializer, global::StrawberryShake.IOperationResultDataFactory<global::Forum3Server.IGetAllUsersResult> resultDataFactory, global::StrawberryShake.Serialization.ISerializerResolver serializerResolver)
+        {
+            _entityStore = entityStore ?? throw new global::System.ArgumentNullException(nameof(entityStore));
+            _idSerializer = idSerializer ?? throw new global::System.ArgumentNullException(nameof(idSerializer));
+            _resultDataFactory = resultDataFactory ?? throw new global::System.ArgumentNullException(nameof(resultDataFactory));
+            _stringParser = serializerResolver.GetLeafValueParser<global::System.String, global::System.String>("String") ?? throw new global::System.ArgumentException("No serializer for type `String` found.");
+            _intParser = serializerResolver.GetLeafValueParser<global::System.Int32, global::System.Int32>("Int") ?? throw new global::System.ArgumentException("No serializer for type `Int` found.");
+        }
+
+        public global::StrawberryShake.IOperationResult<IGetAllUsersResult> Build(global::StrawberryShake.Response<global::System.Text.Json.JsonDocument> response)
+        {
+            (IGetAllUsersResult Result, GetAllUsersResultInfo Info)? data = null;
+            global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.IClientError>? errors = null;
+            if (response.Exception is null)
+            {
+                try
+                {
+                    if (response.Body != null)
+                    {
+                        if (response.Body.RootElement.TryGetProperty("data", out global::System.Text.Json.JsonElement dataElement) && dataElement.ValueKind == global::System.Text.Json.JsonValueKind.Object)
+                        {
+                            data = BuildData(dataElement);
+                        }
+
+                        if (response.Body.RootElement.TryGetProperty("errors", out global::System.Text.Json.JsonElement errorsElement))
+                        {
+                            errors = global::StrawberryShake.Json.JsonErrorParser.ParseErrors(errorsElement);
+                        }
+                    }
+                }
+                catch (global::System.Exception ex)
+                {
+                    errors = new global::StrawberryShake.IClientError[]{new global::StrawberryShake.ClientError(ex.Message, exception: ex, extensions: new global::System.Collections.Generic.Dictionary<global::System.String, global::System.Object?>{{"body", response.Body?.RootElement.ToString()}})};
+                }
+            }
+            else
+            {
+                if (response.Body != null && response.Body.RootElement.TryGetProperty("errors", out global::System.Text.Json.JsonElement errorsElement))
+                {
+                    errors = global::StrawberryShake.Json.JsonErrorParser.ParseErrors(errorsElement);
+                }
+                else
+                {
+                    errors = new global::StrawberryShake.IClientError[]{new global::StrawberryShake.ClientError(response.Exception.Message, exception: response.Exception, extensions: new global::System.Collections.Generic.Dictionary<global::System.String, global::System.Object?>{{"body", response.Body?.RootElement.ToString()}})};
+                }
+            }
+
+            return new global::StrawberryShake.OperationResult<IGetAllUsersResult>(data?.Result, data?.Info, _resultDataFactory, errors);
+        }
+
+        private (IGetAllUsersResult, GetAllUsersResultInfo) BuildData(global::System.Text.Json.JsonElement obj)
+        {
+            var entityIds = new global::System.Collections.Generic.HashSet<global::StrawberryShake.EntityId>();
+            global::StrawberryShake.IEntityStoreSnapshot snapshot = default !;
+            global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.EntityId?>? allUsersId = default !;
+            _entityStore.Update(session =>
+            {
+                allUsersId = UpdateIGetAllUsers_AllUsersEntityArray(session, global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "allUsers"), entityIds);
+                snapshot = session.CurrentSnapshot;
+            });
+            var resultInfo = new GetAllUsersResultInfo(allUsersId, entityIds, snapshot.Version);
+            return (_resultDataFactory.Create(resultInfo), resultInfo);
+        }
+
+        private global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.EntityId?>? UpdateIGetAllUsers_AllUsersEntityArray(global::StrawberryShake.IEntityStoreUpdateSession session, global::System.Text.Json.JsonElement? obj, global::System.Collections.Generic.ISet<global::StrawberryShake.EntityId> entityIds)
+        {
+            if (!obj.HasValue)
+            {
+                return null;
+            }
+
+            var users = new global::System.Collections.Generic.List<global::StrawberryShake.EntityId?>();
+            foreach (global::System.Text.Json.JsonElement child in obj.Value.EnumerateArray())
+            {
+                users.Add(UpdateIGetAllUsers_AllUsersEntity(session, child, entityIds));
+            }
+
+            return users;
+        }
+
+        private global::StrawberryShake.EntityId? UpdateIGetAllUsers_AllUsersEntity(global::StrawberryShake.IEntityStoreUpdateSession session, global::System.Text.Json.JsonElement? obj, global::System.Collections.Generic.ISet<global::StrawberryShake.EntityId> entityIds)
+        {
+            if (!obj.HasValue)
+            {
+                return null;
+            }
+
+            global::StrawberryShake.EntityId entityId = _idSerializer.Parse(obj.Value);
+            entityIds.Add(entityId);
+            if (entityId.Name.Equals("User", global::System.StringComparison.Ordinal))
+            {
+                if (session.CurrentSnapshot.TryGetEntity(entityId, out global::Forum3Server.State.UserEntity? entity))
+                {
+                    session.SetEntity(entityId, new global::Forum3Server.State.UserEntity(DeserializeString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "firstName")), DeserializeString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "lastName")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "id"))));
+                }
+                else
+                {
+                    session.SetEntity(entityId, new global::Forum3Server.State.UserEntity(DeserializeString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "firstName")), DeserializeString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "lastName")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "id"))));
+                }
+
+                return entityId;
+            }
+
+            throw new global::System.NotSupportedException();
+        }
+
+        private global::System.String? DeserializeString(global::System.Text.Json.JsonElement? obj)
+        {
+            if (!obj.HasValue)
+            {
+                return null;
+            }
+
+            return _stringParser.Parse(obj.Value.GetString()!);
+        }
+
+        private global::System.Int32 DeserializeNonNullableInt32(global::System.Text.Json.JsonElement? obj)
+        {
+            if (!obj.HasValue)
+            {
+                throw new global::System.ArgumentNullException();
+            }
+
+            return _intParser.Parse(obj.Value.GetInt32()!);
         }
     }
 
@@ -411,12 +1583,16 @@ namespace Forum3Server.State
         private readonly global::StrawberryShake.IEntityStore _entityStore;
         private readonly global::StrawberryShake.IEntityIdSerializer _idSerializer;
         private readonly global::StrawberryShake.IOperationResultDataFactory<global::Forum3Server.IGetAllPostsResult> _resultDataFactory;
+        private readonly global::StrawberryShake.Serialization.ILeafValueParser<global::System.String, global::System.String> _stringParser;
+        private readonly global::StrawberryShake.Serialization.ILeafValueParser<global::System.String, global::System.DateTimeOffset> _dateTimeParser;
         private readonly global::StrawberryShake.Serialization.ILeafValueParser<global::System.Int32, global::System.Int32> _intParser;
         public GetAllPostsBuilder(global::StrawberryShake.IEntityStore entityStore, global::StrawberryShake.IEntityIdSerializer idSerializer, global::StrawberryShake.IOperationResultDataFactory<global::Forum3Server.IGetAllPostsResult> resultDataFactory, global::StrawberryShake.Serialization.ISerializerResolver serializerResolver)
         {
             _entityStore = entityStore ?? throw new global::System.ArgumentNullException(nameof(entityStore));
             _idSerializer = idSerializer ?? throw new global::System.ArgumentNullException(nameof(idSerializer));
             _resultDataFactory = resultDataFactory ?? throw new global::System.ArgumentNullException(nameof(resultDataFactory));
+            _stringParser = serializerResolver.GetLeafValueParser<global::System.String, global::System.String>("String") ?? throw new global::System.ArgumentException("No serializer for type `String` found.");
+            _dateTimeParser = serializerResolver.GetLeafValueParser<global::System.String, global::System.DateTimeOffset>("DateTime") ?? throw new global::System.ArgumentException("No serializer for type `DateTime` found.");
             _intParser = serializerResolver.GetLeafValueParser<global::System.Int32, global::System.Int32>("Int") ?? throw new global::System.ArgumentException("No serializer for type `Int` found.");
         }
 
@@ -504,17 +1680,37 @@ namespace Forum3Server.State
             {
                 if (session.CurrentSnapshot.TryGetEntity(entityId, out global::Forum3Server.State.PostEntity? entity))
                 {
-                    session.SetEntity(entityId, new global::Forum3Server.State.PostEntity(DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "id"))));
+                    session.SetEntity(entityId, new global::Forum3Server.State.PostEntity(DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "title")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "content")), DeserializeNonNullableDateTimeOffset(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "createdDateTime")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "userId")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "id"))));
                 }
                 else
                 {
-                    session.SetEntity(entityId, new global::Forum3Server.State.PostEntity(DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "id"))));
+                    session.SetEntity(entityId, new global::Forum3Server.State.PostEntity(DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "title")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "content")), DeserializeNonNullableDateTimeOffset(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "createdDateTime")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "userId")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "id"))));
                 }
 
                 return entityId;
             }
 
             throw new global::System.NotSupportedException();
+        }
+
+        private global::System.String DeserializeNonNullableString(global::System.Text.Json.JsonElement? obj)
+        {
+            if (!obj.HasValue)
+            {
+                throw new global::System.ArgumentNullException();
+            }
+
+            return _stringParser.Parse(obj.Value.GetString()!);
+        }
+
+        private global::System.DateTimeOffset DeserializeNonNullableDateTimeOffset(global::System.Text.Json.JsonElement? obj)
+        {
+            if (!obj.HasValue)
+            {
+                throw new global::System.ArgumentNullException();
+            }
+
+            return _dateTimeParser.Parse(obj.Value.GetString()!);
         }
 
         private global::System.Int32 DeserializeNonNullableInt32(global::System.Text.Json.JsonElement? obj)
@@ -538,6 +1734,8 @@ namespace Forum3Server.State
             global::System.String __typename = obj.GetProperty("__typename").GetString()!;
             return __typename switch
             {
+                "Comment" => ParseCommentEntityId(obj, __typename),
+                "User" => ParseUserEntityId(obj, __typename),
                 "Post" => ParsePostEntityId(obj, __typename),
                 _ => throw new global::System.NotSupportedException()};
         }
@@ -546,8 +1744,44 @@ namespace Forum3Server.State
         {
             return entityId.Name switch
             {
+                "Comment" => FormatCommentEntityId(entityId),
+                "User" => FormatUserEntityId(entityId),
                 "Post" => FormatPostEntityId(entityId),
                 _ => throw new global::System.NotSupportedException()};
+        }
+
+        private global::StrawberryShake.EntityId ParseCommentEntityId(global::System.Text.Json.JsonElement obj, global::System.String type)
+        {
+            return new global::StrawberryShake.EntityId(type, obj.GetProperty("id").GetInt32()!);
+        }
+
+        private global::System.String FormatCommentEntityId(global::StrawberryShake.EntityId entityId)
+        {
+            using var writer = new global::StrawberryShake.Internal.ArrayWriter();
+            using var jsonWriter = new global::System.Text.Json.Utf8JsonWriter(writer, _options);
+            jsonWriter.WriteStartObject();
+            jsonWriter.WriteString("__typename", entityId.Name);
+            jsonWriter.WriteNumber("id", (global::System.Int32)entityId.Value);
+            jsonWriter.WriteEndObject();
+            jsonWriter.Flush();
+            return global::System.Text.Encoding.UTF8.GetString(writer.GetInternalBuffer(), 0, writer.Length);
+        }
+
+        private global::StrawberryShake.EntityId ParseUserEntityId(global::System.Text.Json.JsonElement obj, global::System.String type)
+        {
+            return new global::StrawberryShake.EntityId(type, obj.GetProperty("id").GetInt32()!);
+        }
+
+        private global::System.String FormatUserEntityId(global::StrawberryShake.EntityId entityId)
+        {
+            using var writer = new global::StrawberryShake.Internal.ArrayWriter();
+            using var jsonWriter = new global::System.Text.Json.Utf8JsonWriter(writer, _options);
+            jsonWriter.WriteStartObject();
+            jsonWriter.WriteString("__typename", entityId.Name);
+            jsonWriter.WriteNumber("id", (global::System.Int32)entityId.Value);
+            jsonWriter.WriteEndObject();
+            jsonWriter.Flush();
+            return global::System.Text.Encoding.UTF8.GetString(writer.GetInternalBuffer(), 0, writer.Length);
         }
 
         private global::StrawberryShake.EntityId ParsePostEntityId(global::System.Text.Json.JsonElement obj, global::System.String type)
@@ -591,6 +1825,8 @@ namespace Microsoft.Extensions.DependencyInjection
                 return new ClientServiceProvider(global::Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(serviceCollection));
             });
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => new global::Forum3Server.State.Forum3ClientStoreAccessor(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationStore>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)), global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IEntityStore>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)), global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IEntityIdSerializer>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)), global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::System.Collections.Generic.IEnumerable<global::StrawberryShake.IOperationRequestFactory>>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)), global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::System.Collections.Generic.IEnumerable<global::StrawberryShake.IOperationResultDataFactory>>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp))));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::Forum3Server.GetAllCommentsQuery>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::Forum3Server.GetAllUsersQuery>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::Forum3Server.GetAllPostsQuery>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::Forum3Server.Forum3Client>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::Forum3Server.IForum3Client>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
@@ -606,6 +1842,8 @@ namespace Microsoft.Extensions.DependencyInjection
                 var clientFactory = global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::System.Net.Http.IHttpClientFactory>(parentServices);
                 return new global::StrawberryShake.Transport.Http.HttpConnection(() => clientFactory.CreateClient("Forum3Client"));
             });
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IEntityMapper<global::Forum3Server.State.CommentEntity, global::Forum3Server.GetAllComments_AllComments_Comment>, global::Forum3Server.State.GetAllComments_AllComments_CommentFromCommentEntityMapper>(services);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IEntityMapper<global::Forum3Server.State.UserEntity, global::Forum3Server.GetAllUsers_AllUsers_User>, global::Forum3Server.State.GetAllUsers_AllUsers_UserFromUserEntityMapper>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IEntityMapper<global::Forum3Server.State.PostEntity, global::Forum3Server.GetAllPosts_AllPosts_Post>, global::Forum3Server.State.GetAllPosts_AllPosts_PostFromPostEntityMapper>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.Serialization.ISerializer, global::StrawberryShake.Serialization.StringSerializer>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.Serialization.ISerializer, global::StrawberryShake.Serialization.BooleanSerializer>(services);
@@ -624,6 +1862,20 @@ namespace Microsoft.Extensions.DependencyInjection
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.Serialization.ISerializer, global::StrawberryShake.Serialization.TimeSpanSerializer>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.Serialization.ISerializer, global::StrawberryShake.Serialization.JsonSerializer>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.Serialization.ISerializerResolver>(services, sp => new global::StrawberryShake.Serialization.SerializerResolver(global::System.Linq.Enumerable.Concat(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::System.Collections.Generic.IEnumerable<global::StrawberryShake.Serialization.ISerializer>>(parentServices), global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::System.Collections.Generic.IEnumerable<global::StrawberryShake.Serialization.ISerializer>>(sp))));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory<global::Forum3Server.IGetAllCommentsResult>, global::Forum3Server.State.GetAllCommentsResultFactory>(services);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationResultDataFactory<global::Forum3Server.IGetAllCommentsResult>>(sp));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationRequestFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::Forum3Server.IGetAllCommentsQuery>(sp));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::Forum3Server.IGetAllCommentsResult>, global::Forum3Server.State.GetAllCommentsBuilder>(services);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationExecutor<global::Forum3Server.IGetAllCommentsResult>>(services, sp => new global::StrawberryShake.OperationExecutor<global::System.Text.Json.JsonDocument, global::Forum3Server.IGetAllCommentsResult>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.Transport.Http.IHttpConnection>(sp), () => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::Forum3Server.IGetAllCommentsResult>>(sp), global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationStore>(sp), strategy));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::Forum3Server.GetAllCommentsQuery>(services);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::Forum3Server.IGetAllCommentsQuery>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::Forum3Server.GetAllCommentsQuery>(sp));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory<global::Forum3Server.IGetAllUsersResult>, global::Forum3Server.State.GetAllUsersResultFactory>(services);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationResultDataFactory<global::Forum3Server.IGetAllUsersResult>>(sp));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationRequestFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::Forum3Server.IGetAllUsersQuery>(sp));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::Forum3Server.IGetAllUsersResult>, global::Forum3Server.State.GetAllUsersBuilder>(services);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationExecutor<global::Forum3Server.IGetAllUsersResult>>(services, sp => new global::StrawberryShake.OperationExecutor<global::System.Text.Json.JsonDocument, global::Forum3Server.IGetAllUsersResult>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.Transport.Http.IHttpConnection>(sp), () => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::Forum3Server.IGetAllUsersResult>>(sp), global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationStore>(sp), strategy));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::Forum3Server.GetAllUsersQuery>(services);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::Forum3Server.IGetAllUsersQuery>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::Forum3Server.GetAllUsersQuery>(sp));
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory<global::Forum3Server.IGetAllPostsResult>, global::Forum3Server.State.GetAllPostsResultFactory>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationResultDataFactory<global::Forum3Server.IGetAllPostsResult>>(sp));
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationRequestFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::Forum3Server.IGetAllPostsQuery>(sp));

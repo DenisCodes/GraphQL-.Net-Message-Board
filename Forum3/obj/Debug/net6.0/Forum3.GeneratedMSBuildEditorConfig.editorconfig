@@ -24,24 +24,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\mandd\RiderProjects\Forum\Forum3
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/mandd/RiderProjects/Forum/Forum3/Forum3GqlShema/GetAllComments.graphql]
-build_metadata.AdditionalFiles.GraphQL = true
-build_metadata.AdditionalFiles.GraphQLConfig = 
-build_metadata.AdditionalFiles.TargetPath = 
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/mandd/RiderProjects/Forum/Forum3/Forum3GqlShema/GetAllPosts.graphql]
-build_metadata.AdditionalFiles.GraphQL = true
-build_metadata.AdditionalFiles.GraphQLConfig = 
-build_metadata.AdditionalFiles.TargetPath = 
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/mandd/RiderProjects/Forum/Forum3/Forum3GqlShema/GetAllUsers.graphql]
-build_metadata.AdditionalFiles.GraphQL = true
-build_metadata.AdditionalFiles.GraphQLConfig = 
-build_metadata.AdditionalFiles.TargetPath = 
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/mandd/RiderProjects/Forum/Forum3/Forum3GqlShema/schema.extensions.graphql]
 build_metadata.AdditionalFiles.GraphQL = true
 build_metadata.AdditionalFiles.GraphQLConfig = 

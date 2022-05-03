@@ -16,6 +16,30 @@
 		<PackageReference Include="StrawberryShake.CodeGeneration.CSharp.Analyzers" Version="12.8.1" />
 		<PackageReference Include="StrawberryShake.Transport.Http" Version="12.8.1" />
 	</ItemGroup>
+
+	<ItemGroup>
+	  <GraphQL Update="Forum3GqlShema\schema.graphql">
+	    <Generator>MSBuild:Compile</Generator>
+	  </GraphQL>
+	  <GraphQL Update="Forum3GqlShema\schema.extensions.graphql">
+	    <Generator>MSBuild:Compile</Generator>
+	  </GraphQL>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <_ContentIncludedByDefault Remove="Forum3\.graphqlrc.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Watch Remove="Forum3\schema.extensions.graphql" />
+	  <Watch Remove="Forum3\schema.graphql" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <GraphQLConfig Update="Forum3GqlShema\.graphqlrc.json">
+	    <Generator>MSBuild:Compile</Generator>
+	  </GraphQLConfig>
+	</ItemGroup>
 	
 	
 </Project>
